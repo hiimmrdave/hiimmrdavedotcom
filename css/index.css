@@ -27,7 +27,7 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   color: var(--dark0);
-  background-color: var(--white);
+  background-color: var(--light0);
 }
 p:last-child {
   margin-bottom: 0;
@@ -35,7 +35,7 @@ p:last-child {
 p,
 .tmpl-post li,
 img {
-  max-width: 37.5em; /* 600px /16 */
+  max-width: 70ch; /* 600px /16 */
 }
 p,
 .tmpl-post li {
@@ -91,7 +91,7 @@ pre {
   hyphens: none;
   padding: 1em;
   margin: .5em 0;
-  max-inline-size: 100ch;
+  max-inline-size: 82ch;
 }
 .highlight-line {
   display: block;
