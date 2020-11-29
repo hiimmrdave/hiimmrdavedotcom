@@ -67,6 +67,6 @@ interesting traits:
  - an array can contain positions that are empty
 
 An array can be searched, sorted, listed, and acted on element-by-element.
-Javascript has a whole variety of methods on the [Array prototype](https://developer.mozilla.org/tr/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)
+Javascript has a whole variety of methods on the [Array prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 to help with this. In a future post, I'll start breaking down what these are and
 what they're good for.
