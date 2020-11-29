@@ -1,12 +1,22 @@
 :root {
-  --red: #C5004A;
   --darkred: #7F0036;
-  --lightgray: #e0e0e0;
   --gray: #C0C0C0;
   --darkgray: #333;
   --navy: #17050F;
   --blue: #082840;
   --white: #fff;
+  --basehue: 250;
+  --dark0: hsl(var(--basehue) 10% 10%);
+  --dark1: hsl(var(--basehue) 10% 25%);
+  --dark2: hsl(var(--basehue) 10% 40%);
+  --light2: hsl(var(--basehue) 10% 55%);
+  --light1: hsl(var(--basehue) 10% 70%);
+  --light0: hsl(var(--basehue) 10% 85%);
+  --redhue: 10;
+  --bluehue: 220;
+  --red: hsl(var(--redhue) 70% 45%);
+  --blue: hsl(var(--bluehue) 70% 45%);
+  --black: hsl(0 0% 0%);
 }
 * {
   box-sizing: border-box;
@@ -16,7 +26,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: system-ui, sans-serif;
-  color: var(--darkgray);
+  color: var(--dark0);
   background-color: var(--white);
 }
 p:last-child {
@@ -44,7 +54,7 @@ main :first-child {
   margin-top: 0;
 }
 header {
-  border-bottom: 1px dashed var(--lightgray);
+  border-bottom: 1px dashed var(--light1);
 }
 header:after {
   content: "";
@@ -81,7 +91,7 @@ pre {
   hyphens: none;
   padding: 1em;
   margin: .5em 0;
-  background-color: #f6f6f6;
+  max-inline-size: 100ch;
 }
 .highlight-line {
   display: block;
@@ -104,7 +114,7 @@ pre {
   background-color: #222;
 }
 .highlight-line-active {
-  background-color: #444;
+  background-color: var(--dark2);
   background-color: hsla(0, 0%, 27%, .8);
 }
 .highlight-line-add {
@@ -126,7 +136,7 @@ pre {
 }
 
 /* Nav */
-.nav {
+nav ul {
   padding: 0;
   list-style: none;
   float: left;
@@ -162,7 +172,7 @@ pre {
 .postlist-date,
 .postlist-item:before {
   font-size: 0.8125em; /* 13px /16 */
-  color: var(--darkgray);
+  color: var(--dark0);
 }
 .postlist-date {
   word-spacing: -0.5px;
