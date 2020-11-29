@@ -1,7 +1,7 @@
 {
-  "name": "eleventy-base-blog",
+  "name": "hiimmrdave",
   "version": "5.0.2",
-  "description": "A starter repository for a blog web site using the Eleventy static site generator.",
+  "description": "The blog for Mr. Dave, because apparently that's what we're doing",
   "scripts": {
     "build": "eleventy",
     "watch": "eleventy --watch",
@@ -9,14 +9,10 @@
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/11ty/eleventy-base-blog.git"
-  },
   "author": {
-    "name": "Zach Leatherman",
-    "email": "zachleatherman@gmail.com",
-    "url": "https://zachleat.com/"
+    "name": "Dave Vogt",
+    "email": "horsedreamer@gmail.com",
+    "url": "https://hiimmrdave.com"
   },
   "license": "MIT",
   "bugs": {
