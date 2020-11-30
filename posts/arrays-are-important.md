@@ -6,14 +6,15 @@ tags:
   - data-structure
   - array
   - computer-science
+  - javascript
 layout: layouts/post.njk
 ---
 
 ## The first non-primitve data type
 
-Every language has primitive data types. Primitives are pieces of information that can't be broken into smaller parts and still retain their meaning. In javascript, these are `number`, `string`, `boolean`, `bigint`, `symbol`, `null`, and `undefined`. Other languages have more or fewer. Java differentiates between integers and floating point numbers and deals in individual characters instead of strings, like C. Every language, though, eventually has to deal with more than one piece of information, and the simplest collection of data is the array.
+Every language has primitive data types. Primitives are pieces of information that can't be broken into smaller parts and still retain their meaning. In javascript, these are `number`, `string`, `boolean`, `bigint`, `symbol`, `null`, and `undefined`. Other languages have more or fewer. Java and C, for example, differentiate between integers and floating point numbers and deal in individual characters instead of strings. Every language, though, eventually has to deal with more than one piece of information, and the simplest collection of data is the array.
 
-An array is a group of data in sequence. It holds each piece of data (each "element") in order and can hold zero or more elements. We can read any element by its position in the order (its "index"), we can add, alter, or remove elements at any point. An array is the simplest collection of data, but by putting data in order we gain a lot of power and flexibility.
+An array is a group of data in sequence. It holds each piece of data (each "element") in order and can hold zero or more elements. The elements of an array can be any type of data, including any of the primitive types, arrays, or objects (which are tricky beasts and will be covered at a later date.) We can read any element by its position in the order (its "index"), we can add, alter, or remove elements at any point. We can even change the order of the elements, if we're careful.
 
 ## Let's look at a few examples of arrays.
 
