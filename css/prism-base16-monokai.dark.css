@@ -1,16 +1,20 @@
 :root {
   --basehue: 250;
-  --dark0: hsl(var(--basehue) 10% 10%);
-  --dark1: hsl(var(--basehue) 10% 25%);
-  --dark2: hsl(var(--basehue) 10% 40%);
-  --light2: hsl(var(--basehue) 10% 55%);
-  --light1: hsl(var(--basehue) 10% 70%);
-  --light0: hsl(var(--basehue) 10% 85%);
-  --redhue: 10;
-  --bluehue: 220;
-  --red: hsl(var(--redhue) 70% 45%);
-  --blue: hsl(var(--bluehue) 70% 45%);
-  --black: hsl(0 0% 0%);
+  --dark0: hsl(var(--basehue), 10%, 10%);
+  --dark1: hsl(var(--basehue), 10%, 25%);
+  --dark2: hsl(var(--basehue), 10%, 40%);
+  --light2: hsl(var(--basehue), 10%, 55%);
+  --light1: hsl(var(--basehue), 10%, 70%);
+  --light0: hsl(var(--basehue), 10%, 85%);
+  --orange: hsl(25, 80%, 60%);
+  --lightorange: hsl(30, 65%, 70%);
+  --red: hsl(5, 70%, 60%);
+  --blue: hsl(220, 70%, 45%);
+  --black: hsl(0, 0%, 0%);
+  --teal: hsl(175, 80%, 70%);
+  --sky: hsl(210, 80%, 70%);
+  --purple: hsl(265, 70%, 65%);
+  --green: hsl(140, 60%, 65%);
 }
 
 code[class*="language-"], pre[class*="language-"] {
@@ -29,7 +33,7 @@ code[class*="language-"], pre[class*="language-"] {
 	-ms-hyphens: none;
 	hyphens: none;
 	background: var(--dark1);
-	color: #f8f8f2;
+	color: var(--light0);
 }
 pre[class*="language-"] {
 	padding: 1.5em 0;
@@ -41,49 +45,49 @@ pre[class*="language-"] {
 	border-radius: .3em;
 }
 .token.comment, .token.prolog, .token.doctype, .token.cdata {
-	color: #75715e;
+	color: var(--dark2);
 }
 .token.punctuation {
-	color: #f8f8f2;
+	color: var(--light0);
 }
 .token.namespace {
 	opacity: .7;
 }
-.token.operator, .token.boolean, .token.number {
-	color: #fd971f;
+.token.operator, .token.boolean {
+	color: var(--red);
 }
 .token.property {
-	color: #f4bf75;
+	color: var(--lightorange);
 }
-.token.tag {
-	color: #66d9ef;
+.token.tag, .token.number {
+	color: var(--sky);
 }
 .token.string {
-	color: #a1efe4;
+	color: var(--lightorange);
 }
 .token.selector {
-	color: #ae81ff;
+	color: var(--purple);
 }
 .token.attr-name {
-	color: #fd971f;
+	color: var(--orange);
 }
 .token.entity, .token.url, .language-css .token.string, .style .token.string {
-	color: #a1efe4;
+	color: var(--teal);
 }
 .token.attr-value, .token.keyword, .token.control, .token.directive, .token.unit {
-	color: #a6e22e;
+	color: var(--green);
 }
 .token.statement, .token.regex, .token.atrule {
-	color: #a1efe4;
+	color: var(--teal);
 }
 .token.placeholder, .token.variable {
-	color: #66d9ef;
+	color: var(--sky);
 }
 .token.deleted {
 	text-decoration: line-through;
 }
 .token.inserted {
-	border-bottom: 1px dotted #f9f8f5;
+	border-bottom: 1px dotted var(--light0);
 	text-decoration: none;
 }
 .token.italic {
@@ -93,12 +97,12 @@ pre[class*="language-"] {
 	font-weight: bold;
 }
 .token.important {
-	color: #f92672;
+	color: var(--red);
 }
 .token.entity {
 	cursor: help;
 }
 pre > code.highlight {
-	outline: 0.4em solid #f92672;
+	outline: 0.4em solid var(--red);
 	outline-offset: .4em;
 }
