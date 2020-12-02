@@ -21,9 +21,10 @@ pre[class*="language-"] {
 	margin: .5em 0;
 	overflow: auto;
 }
-:not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
+:not(pre) > code {
+	padding: .2em;
+  border-radius: .3em;
+  background-color: var(--grey1);
 }
 .token.comment, .token.prolog, .token.doctype, .token.cdata {
 	color: var(--grey5);

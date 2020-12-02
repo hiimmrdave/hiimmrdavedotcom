@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,800;1,400;1,800&family=Merriweather+Sans:ital,wght@0,400;0,700;1,300;1,800&display=swap');
 :root {
-  --light: #ebeaef;
-  --grey1: #d3d2dc;
-  --grey2: #bbb9c9;
-  --grey3: #a3a1b7;
-  --grey4: #8b89a4;
-  --grey5: #747192;
-  --grey6: #615e7b;
-  --grey7: #4e4c63;
-  --grey8: #3c3a4c;
-  --grey9: #292834;
-  --dark: #17161d;
+  --light: hsl(250, 13%, 93%);
+  --grey1: hsl(250, 13%, 84%);
+  --grey2: hsl(250, 13%, 76%);
+  --grey3: hsl(250, 13%, 67%);
+  --grey4: hsl(250, 13%, 59%);
+  --grey5: hsl(250, 13%, 51%);
+  --grey6: hsl(250, 13%, 43%);
+  --grey7: hsl(250, 13%, 34%);
+  --grey8: hsl(250, 13%, 26%);
+  --grey9: hsl(250, 13%, 18%);
+  --dark: hsl(250, 13%, 10%);
   --ltred: hsl(0, 80%, 70%);
   --ltorange: hsl(25, 80%, 70%);
   --ltyellow: hsl(48, 85%, 75%);
-  --ltlime: hsl(90, 70%, 70%);
-  --ltgreen: hsl(130, 65%, 70%);
-  --ltteal: hsl(165, 55%, 70%);
-  --teal: hsl(165, 65%, 40%);
+  --ltlime: hsl(95, 70%, 70%);
+  --ltgreen: hsl(140, 65%, 65%);
+  --ltteal: hsl(170, 55%, 70%);
+  --teal: hsl(170, 65%, 50%);
   --ltblue: hsl(210, 70%, 70%);
-  --blue: hsl(210, 70%, 45%);
+  --blue: hsl(210, 70%, 40%);
   --dkblue: hsl(210, 70%, 25%);
   --ltpurple: hsl(260, 80%, 75%);
   --ltpink: hsl(310, 65%, 75%);
@@ -139,8 +139,8 @@ pre {
 .home {
   padding: 0 1rem;
   float: left;
-  margin: 1rem 0; /* 16px /16 */
-  font-size: 1em; /* 16px /16 */
+  margin: 1rem 0;
+  font-size: 1em;
 }
 .home :link:not(:hover), .home :visited:not(:hover) {
   text-decoration: none;
@@ -249,4 +249,96 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
   color: #aaa;
+}
+
+/* code highlighting */
+code[class*="language-"], pre[class*="language-"] {
+	font-size: 14px;
+	line-height: 1.375;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	background: var(--grey9);
+	color: var(--grey2);
+}
+pre[class*="language-"] {
+	padding: 1.5em 1ch;
+	margin: .5em 0;
+	overflow: auto;
+}
+:not(pre) > code {
+	padding: .2em;
+  border-radius: .3em;
+  background-color: var(--grey1);
+}
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+	color: var(--grey5);
+}
+.token.punctuation {
+	color: var(--light);
+}
+.token.namespace {
+	opacity: .7;
+}
+.token.operator, .token.boolean {
+	color: var(--ltred);
+}
+.token.property {
+	color: var(--ltorange);
+}
+.token.tag, .token.number {
+	color: var(--ltblue);
+}
+.token.string {
+	color: var(--ltorange);
+}
+.token.selector {
+	color: var(--ltpurple);
+}
+.token.attr-name {
+	color: var(--ltorange);
+}
+.token.entity, .token.url, .language-css .token.string, .style .token.string {
+	color: var(--ltteal);
+}
+.token.attr-value, .token.keyword, .token.control, .token.directive, .token.unit {
+	color: var(--ltgreen);
+}
+.token.statement, .token.regex, .token.atrule {
+	color: var(--ltteal);
+}
+.token.placeholder, .token.variable {
+	color: var(--ltblue);
+}
+.token.deleted {
+	text-decoration: line-through;
+}
+.token.inserted {
+	border-bottom: 1px dotted var(--light);
+	text-decoration: none;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.important, .token.bold {
+	font-weight: bold;
+}
+.token.important {
+	color: var(--ltred);
+}
+.token.entity {
+	cursor: help;
+}
+pre > code.highlight {
+	outline: 0.4em solid var(--ltred);
+	outline-offset: .4em;
 }
