@@ -1,22 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,800;1,400;1,800&family=Merriweather+Sans:ital,wght@0,400;0,700;1,300;1,800&display=swap');
 :root {
-  --darkred: #7F0036;
-  --gray: #C0C0C0;
-  --darkgray: #333;
-  --navy: #17050F;
-  --blue: #082840;
-  --white: #fff;
-  --basehue: 250;
-  --dark0: hsl(var(--basehue) 10% 10%);
-  --dark1: hsl(var(--basehue) 10% 25%);
-  --dark2: hsl(var(--basehue) 10% 40%);
-  --light2: hsl(var(--basehue) 10% 55%);
-  --light1: hsl(var(--basehue) 10% 70%);
-  --light0: hsl(var(--basehue) 10% 85%);
-  --redhue: 10;
-  --bluehue: 220;
-  --red: hsl(var(--redhue) 70% 45%);
-  --blue: hsl(var(--bluehue) 70% 45%);
-  --black: hsl(0 0% 0%);
+  --light: #ebeaef;
+  --grey1: #d3d2dc;
+  --grey2: #bbb9c9;
+  --grey3: #a3a1b7;
+  --grey4: #8b89a4;
+  --grey5: #747192;
+  --grey6: #615e7b;
+  --grey7: #4e4c63;
+  --grey8: #3c3a4c;
+  --grey9: #292834;
+  --dark: #17161d;
+  --ltred: hsl(0, 80%, 70%);
+  --ltorange: hsl(25, 80%, 70%);
+  --ltyellow: hsl(48, 85%, 75%);
+  --ltlime: hsl(90, 70%, 70%);
+  --ltgreen: hsl(130, 65%, 70%);
+  --ltteal: hsl(165, 55%, 70%);
+  --teal: hsl(165, 65%, 40%);
+  --ltblue: hsl(210, 70%, 70%);
+  --blue: hsl(210, 70%, 45%);
+  --dkblue: hsl(210, 70%, 25%);
+  --ltpurple: hsl(260, 80%, 75%);
+  --ltpink: hsl(310, 65%, 75%);
 }
 * {
   box-sizing: border-box;
@@ -25,9 +31,13 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: system-ui, sans-serif;
-  color: var(--dark0);
-  background-color: var(--light0);
+  font-family: "Merriweather Sans", sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "EB Garamond", serif;
+  font-weight: bold;
 }
 p:last-child {
   margin-bottom: 0;
@@ -35,26 +45,27 @@ p:last-child {
 p,
 .tmpl-post li,
 img {
-  max-width: 70ch; /* 600px /16 */
-}
-p,
-.tmpl-post li {
+  max-width: 70ch;
   line-height: 1.45;
 }
 a[href] {
   color: var(--blue);
 }
 a[href]:visited {
-  color: var(--navy);
+  color: var(--dkblue);
 }
 main {
   padding: 1rem;
+  max-inline-size: 100ch;
+  margin-inline-start: 4ch;
 }
 main :first-child {
   margin-top: 0;
 }
 header {
-  border-bottom: 1px dashed var(--light1);
+  border-bottom: 1px dashed var(--grey2);
+  max-inline-size: 90ch;
+  margin-inline: 4ch;
 }
 header:after {
   content: "";
@@ -131,8 +142,9 @@ pre {
   margin: 1rem 0; /* 16px /16 */
   font-size: 1em; /* 16px /16 */
 }
-.home :link:not(:hover) {
+.home :link:not(:hover), .home :visited:not(:hover) {
   text-decoration: none;
+  color: var(--dark);
 }
 
 /* Nav */
@@ -150,7 +162,7 @@ nav ul {
   text-decoration: none;
 }
 .nav-item-active {
-  font-weight: 700;
+  font-weight: 800;
   text-decoration: underline;
 }
 
@@ -171,21 +183,21 @@ nav ul {
 }
 .postlist-date,
 .postlist-item:before {
-  font-size: 0.8125em; /* 13px /16 */
-  color: var(--dark0);
+  font-size: 0.8em;
+  color: var(--dark);
 }
 .postlist-date {
   word-spacing: -0.5px;
 }
 .postlist-link {
   display: inline-block;
-  padding: 0.25em 0.1875em; /* 4px 3px /16 */
+  padding: 0.25em 0.2em;
 }
 .postlist-item-active .postlist-link {
   font-weight: bold;
 }
 .tmpl-home .postlist-link {
-  font-size: 1.1875em; /* 19px /16 */
+  font-size: 1.2em;
   font-weight: 700;
 }
 
@@ -198,9 +210,13 @@ nav ul {
   font-size: 0.625em; /* 10px /16 */
   padding: 2px 4px;
   margin-left: 0.8em; /* 8px /10 */
-  background-color: var(--red);
+  background-color: var(--ltteal);
   color: var(--white);
+  border-color: var(--teal);
+  border-style: solid;
+  border-width: 1px;
   border-radius: 0.25em; /* 3px /12 */
+  text-shadow: var(--teal) 0 0 2px;
   text-decoration: none;
 }
 a[href].post-tag,
