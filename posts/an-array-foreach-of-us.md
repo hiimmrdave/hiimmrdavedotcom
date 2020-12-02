@@ -3,9 +3,8 @@ title: An Array forEach of us
 description: I have a preferred way to move through arrays.
 date: 2020-12-05
 tags:
-  - data-structure
+  - data structure
   - array
-  - computer-science
   - javascript
 layout: layouts/post.njk
 ---

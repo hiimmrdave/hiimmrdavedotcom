@@ -3,9 +3,8 @@ title: Arrays are important!
 description: The array is a humble and underappreciated data structure.
 date: 2020-11-28
 tags:
-  - data-structure
+  - data structure
   - array
-  - computer-science
   - javascript
 layout: layouts/post.njk
 ---
