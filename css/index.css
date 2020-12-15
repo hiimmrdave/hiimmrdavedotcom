@@ -12,29 +12,35 @@
   --grey9: hsl(250, 13%, 18%);
   --dark: hsl(250, 13%, 10%);
   --ltred: hsl(0, 80%, 70%);
+  --red: hsl(0, 80%, 50%);
+  --dkred: hsl(0, 80%, 30%);
   --ltorange: hsl(25, 80%, 70%);
   --ltyellow: hsl(48, 85%, 75%);
   --ltlime: hsl(95, 70%, 70%);
   --ltgreen: hsl(140, 65%, 65%);
   --ltteal: hsl(170, 55%, 70%);
   --teal: hsl(170, 65%, 50%);
+  --dkteal: hsl(170, 65%, 30%);
   --ltblue: hsl(210, 70%, 70%);
   --blue: hsl(210, 70%, 40%);
   --dkblue: hsl(210, 70%, 25%);
   --ltpurple: hsl(260, 80%, 75%);
   --ltpink: hsl(310, 65%, 75%);
 }
+
 * {
   box-sizing: border-box;
 }
-html,
-body {
+
+html, body {
   padding: 0;
+  padding-left: 2ch;
   margin: 0;
   font-family: "Merriweather Sans", sans-serif;
   color: var(--dark);
   background-color: var(--light);
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "EB Garamond", serif;
   font-weight: bold;
