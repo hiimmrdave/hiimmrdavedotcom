@@ -35,6 +35,8 @@ First, select which drugs to use from the previously saved information.
 
 ![Two lists. The first is labeled "available drugs." The second is named "selected drugs." There are two arrows between the lists, one pointing toward "selected drugs" labeled "add drug" and one pointing towards "available drugs" labeled "remove drug."](/img/select-drug-flow.png)
 
-Then enter patient data and receive calculated dosing for the selected drugs, an IV fluid rate, and other nifty things.
+Then enter patient data and receive calculated dosing for the selected drugs, an IV fluid rate, and other nifty things. I've provided space for recording information required for the medical record. This tool can be used to calculate a plan or generate a baseline that a qualified individual can tweak to the individual patient's needs.
 
 ![A rough example of the printable output contains a patient named "Flufffy" belonging to Davey Jones, weighing 66 lbs, along with signalment and an example anesthetic drug protocol](/img/dosing-sample-output.png)
+
+The project is already started on GitHub at http://hiimmrdave.github.io/dosing. I'll write more about my planning and implementation as I work through it.
