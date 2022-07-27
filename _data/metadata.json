@@ -1,9 +1,9 @@
 {
   "title": "Hi! I'm Mr. Dave.",
   "url": "https://hiimmrdave.com/",
-  "description": "I'm Mr. Dave, and I'm learning about programming.",
+  "description": "I'm Mr. Dave, and I'm a developer.",
   "feed": {
-    "subtitle": "I'm Mr. Dave, and I'm learning about programming.",
+    "subtitle": "I'm Mr. Dave, and I'm a developer.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://hiimmrdave.com/"
