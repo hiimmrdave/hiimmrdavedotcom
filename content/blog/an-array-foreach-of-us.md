@@ -52,7 +52,7 @@ while (
 }
 ```
 
-There is also a `do...while` syntax which works largely the same as `while`, but it will fail on an empty array. I mention it only for the sake of the "well akchewallee" crowd. I do not recommend it for arrays and it is perfectly reasonable to never write a `do...while` loop.
+There is also a `do...while` syntax which works largely the same as `while`, but it will fail on an empty array. I mention it only for the sake of the "well actually" crowd. I do not recommend it for arrays and it is perfectly reasonable to never write a `do...while` loop.
 
 ## `for...of` and `for...in`
 

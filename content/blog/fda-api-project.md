@@ -29,7 +29,7 @@ This is all part of the `saveData` state from the chart above.
 
 ## Using the data
 
-After the data for each drug in the pharmacy is saved, I need to build the anesthetic plan. The only piece of patient data that the computer needs is the patient's weight. Everything else I'll ask for is for reference and recordkeeping. The interface will allow the selection of any of the stored drugs, calculate the weight-based dose, and present a summary of the plan in a printable format.
+After the data for each drug in the pharmacy is saved, I need to build the anesthetic plan. The only piece of patient data that the computer needs is the patient's weight. Everything else I'll ask for is for reference and record-keeping. The interface will allow the selection of any of the stored drugs, calculate the weight-based dose, and present a summary of the plan in a printable format.
 
 First, select which drugs to use from the previously saved information.
 
@@ -37,6 +37,6 @@ First, select which drugs to use from the previously saved information.
 
 Then enter patient data and receive calculated dosing for the selected drugs, an IV fluid rate, and other nifty things. I've provided space for recording information required for the medical record. This tool can be used to calculate a plan or generate a baseline that a qualified individual can tweak to the individual patient's needs.
 
-![A rough example of the printable output contains a patient named "Flufffy" belonging to Davey Jones, weighing 66 lbs, along with signalment and an example anesthetic drug protocol](/img/dosing-sample-output.png)
+![A rough example of the printable output contains a patient named "Fluffy" belonging to Davey Jones, weighing 66 lbs, along with signalment and an example anesthetic drug protocol](/img/dosing-sample-output.png)
 
-The project is already started on GitHub at http://hiimmrdave.github.io/dosing. I'll write more about my planning and implementation as I work through it.
+The project is already started on GitHub at <http://hiimmrdave.github.io/dosing>. I'll write more about my planning and implementation as I work through it.

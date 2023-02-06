@@ -1,9 +1,8 @@
 ---
 layout: layouts/page.njk
 title: Now
-templateClass: tmpl-page
 eleventyNavigation:
-  key: Now
+  key: now
   order: 4
 ---
 
@@ -16,6 +15,7 @@ I'm a licensed veterinary technician. I provide advanced nursing care for dogs a
 Beyond veterinary medicine, my work interests include:
 
 - making onboarding smooth, easy, and consistent for new team members
+- making expectations explicit so people can do their work with clarity
 - building a path for continued growth to keep talent in the field
 - empowering team members to problem solve before escalating
 - supporting people to let them do their best work
