@@ -1,18 +1,11 @@
 ---
-layout: layouts/post.njk
-title: About Me
-templateClass: tmpl-post
+layout: layouts/page.njk
+templateClass: tmpl-page
 eleventyNavigation:
   key: About Me
   order: 3
 ---
 
-I started my journey to learn web development in early 2018. I've played with
-python, but I've been using mainly javascript and node.js since late 2019. The
-web has always excited me, with its quick feedback loops and multitude of 
-interfaces and availability. Done right, the web can offer each person the the
-best experience for them. We often fall short of that potential. It's easy to
-cut corners, to say we'll fix it later, and leave people out. We have to do
-better.
+I've worked in animal health for over a decade. I've done it for long enough that I've gotten some ideas about how it works. In fact, I've worked with customers and een on teams long enough that I've gotten some ideas about how they work, too. I am working with more and more people, as you do, who are less experienced than me, and also more people who are younger than me. I'm discovering in myself a real passion for sharing the knowledge and experience I've developed. In fact, it's become a major focus of mine. I'd love to talk about doing more of the latter.
 
-I'm here to do better.
+I have a blended family of five. My fianceé is pursuing her Bachelor of Science in Nursing

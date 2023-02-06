@@ -30,12 +30,11 @@
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html, body {
-  padding: 0;
-  padding-left: 2ch;
-  margin: 0;
   font-family: "Merriweather Sans", sans-serif;
   color: var(--dark);
   background-color: var(--light);
@@ -45,8 +44,51 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "EB Garamond", serif;
   font-weight: bold;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main, footer {
+  padding-inline: 2ch;
+}
+
+header {
+  background: var(--grey7);
+  color: var(--grey1);
+  border-bottom: 1px dashed var(--grey1);
+  min-block-size: 5rem;
+}
+
+header :is(h1, h2) {
+  font-size:  2.618rem;
+  padding: 0.618rem;
+}
+
+hgroup h1:not(:first-child) {
+  font-size: 1.618rem;
+}
+
+main {
+  flex-grow: 1;
+  padding-block: 1rem ;
+  padding-inline: 1.618rem;
+  max-inline-size: 100ch;
+}
+
+footer {
+  background: var(--dark);
+  padding-block: 1em;
+  min-block-size: 5em;
+}
+p {
+  margin-block-end: 0.618em;
+}
 p:last-child {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 p,
 .tmpl-post li,
@@ -60,30 +102,11 @@ a[href] {
 a[href]:visited {
   color: var(--dkblue);
 }
-main {
-  padding: 1rem;
-  max-inline-size: 100ch;
-  margin-inline-start: 4ch;
+:is(footer, header) a[href] {
+  color: var(--ltblue);
 }
-main :first-child {
-  margin-top: 0;
-}
-header {
-  border-bottom: 1px dashed var(--grey2);
-  max-inline-size: 90ch;
-  margin-inline: 4ch;
-}
-header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-table {
-  margin: 1em 0;
-}
-table td,
-table th {
-  padding-right: 1em;
+:is(footer, header) a[href]:visited, footer>small {
+  color: var(--grey1);
 }
 
 pre,
@@ -126,21 +149,6 @@ pre {
   display: none;
 }
 
-.highlight-line-isdir {
-  color: #b0b0b0;
-  background-color: #222;
-}
-.highlight-line-active {
-  background-color: var(--dark2);
-  background-color: hsla(0, 0%, 27%, .8);
-}
-.highlight-line-add {
-  background-color: #45844b;
-}
-.highlight-line-remove {
-  background-color: #902f2f;
-}
-
 /* Header */
 .home {
   padding: 0 1rem;
@@ -154,15 +162,17 @@ pre {
 }
 
 /* Nav */
+header > nav{
+  background: var(--dark);
+  padding: 0.618rem;
+}
 nav ul {
-  padding: 0;
   list-style: none;
-  float: left;
-  margin-left: 1em;
+  position: relative;
 }
 .nav-item {
   display: inline-block;
-  margin-right: 1em;
+  margin-inline-end: 0.618rem;
 }
 .nav-item a[href]:not(:hover) {
   text-decoration: none;
@@ -216,18 +226,18 @@ nav ul {
   font-size: 0.625em; /* 10px /16 */
   padding: 2px 4px;
   margin-left: 0.8em; /* 8px /10 */
-  background-color: var(--ltteal);
-  color: var(--white);
-  border-color: var(--teal);
+  background-color: var(--teal);
+  color: var(--dark);
+  border-color: var(--dkteal);
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25em; /* 3px /12 */
-  text-shadow: var(--teal) 0 0 2px;
+  text-shadow: var(--ltteal) 0 0 2px;
   text-decoration: none;
 }
 a[href].post-tag,
 a[href].post-tag:visited {
-  color: #fff;
+  color: var(--dark);
 }
 
 /* Warning */
@@ -256,6 +266,8 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link:visited {
   color: #aaa;
 }
+
+/* keep? */
 
 /* code highlighting */
 code[class*="language-"], pre[class*="language-"] {
@@ -347,4 +359,19 @@ pre[class*="language-"] {
 pre > code.highlight {
 	outline: 0.4em solid var(--ltred);
 	outline-offset: .4em;
+}
+
+.highlight-line-isdir {
+  color: #b0b0b0;
+  background-color: #222;
+}
+.highlight-line-active {
+  background-color: var(--dark2);
+  background-color: hsla(0, 0%, 27%, .8);
+}
+.highlight-line-add {
+  background-color: #45844b;
+}
+.highlight-line-remove {
+  background-color: #902f2f;
 }
