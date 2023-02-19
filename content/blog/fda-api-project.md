@@ -15,7 +15,7 @@ Every day I calculate anesthetic doses for dogs and cats. More precisely, every 
 
 ## Getting the data
 
-The FDA has a set of APIs for getting data about drugs. Most of the anesthetics we use in veterinary medicine are labeled for human use, so they are available via the [openFDA NDC API](https://open.fda.gov/apis/drug/ndc/). <abbr title="National Drug Code">NDC</abbr>s for veterinary-only products aren't available via the API, so I'll provide a means to enter the data manually if it isn't already available. In the future, I would like to offer search by additional fields, like active ingredient or trade name, but the FDA API provides the quickest path to a working prototype.
+The <abbr title="Food and Drug Administration">FDA</abbr> has a set of APIs for getting data about drugs. Most of the anesthetics we use in veterinary medicine are labeled for human use, so they are available via the [openFDA NDC API](https://open.fda.gov/apis/drug/ndc/). <abbr title="National Drug Code">NDC</abbr>s for veterinary-only products aren't available via the API, so I'll provide a means to enter the data manually if it isn't already available. In the future, I would like to offer search by additional fields, like active ingredient or trade name, but the FDA API provides the quickest path to a working prototype.
 
 For each drug saved, I will have to provide a list of doses that are typically used in my facility. This can be provided at any time, but storing it in advance will allow the output to have sane defaults. The anesthetic plan builder will also provide a means to override and provide arbitrary dosing while offering a warning if the entered dose is outside of the expected range.
 

@@ -70,7 +70,7 @@ Saved a whole bunch of typing, here. It strikes a nice balance of being concise 
 The [`for...in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) syntax is similar to `for...of` but instead of iterating over the values of the elements, it iterates over the indices of the elements. To get the same result as the rest of the loops it's a bit more typing than a `for...of` loop.
 
 ```javascript
-for (const index of colors) { // "index" is similar to the "i" of a for loop
+for (const index in colors) { // "index" is similar to the "i" of a for loop
   console.log(colors[index]); // you have to refer to the original array
 }
 ```
@@ -111,4 +111,4 @@ colors.forEach(logArrayItem);
 
 This simple example doesn't need to have access to have access to the whole array in each iteration, but in more complex cases it becomes essential.
 
-I prefer the `forEach` way of thinking. In simple cases, the callback can be provided in-line, while in more complex cases it can be separated out. It makes it simple to refer to the array as a whole, its indices, and the values of the individual elements. The only drawback is that it may not be available in older browsers, and for that we have polyfill.io.
+I prefer the `forEach` way of thinking. In simple cases, the callback can be provided in-line, while in more complex cases it can be separated out. It makes it simple to refer to the array as a whole, its indices, and the values of the individual elements. The only drawback is that it may not be available in older browsers, and for that we have [polyfill.io](https://polyfill.io).

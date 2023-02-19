@@ -3,9 +3,9 @@ layout: layouts/home.njk
 eleventyNavigation:
   key: home
   order: 1
+title: hi, i'm Mr. Dave!
 ---
 
-<h1>hi, i'm Mr. Dave!</h1>
 <section>
   {% set postsCount = collections.posts | length %}
   {% set latestPostsCount = postsCount | min(3) %}
@@ -13,7 +13,7 @@ eleventyNavigation:
   {% set postslistCounter = postsCount %}
   {% include "postslist.njk" %}
   {% if postsCount > 3 %}
-    <p>More posts can be found in
+    <p>more posts can be found in
       <a href="/blog/">the archive</a>.</p>
   {% endif %}
 </section>

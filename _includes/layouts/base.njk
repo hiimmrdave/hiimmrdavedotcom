@@ -10,15 +10,13 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     {% if eleventy.env.runMode === "serve" %}
       {# External files (best with local dev server live reload) #}
-      <link rel="stylesheet" href="/css/index.css">
-      <link rel="stylesheet" href="/css/prism-okaidia.css">
-      <link rel="stylesheet" href="/css/prism-diff.css">
+      <link rel="stylesheet" href="/css/code.css">
+      <link rel="stylesheet" href="/css/screen.css">
     {% else %}
       {# Inlined (fastest site performance in production) #}
       <style>
-        {% include "public/css/index.css" %}
-        {% include "node_modules/prismjs/themes/prism-okaidia.css" %}
-        {% include "public/css/prism-diff.css" %}
+        {% include "public/css/code.css" %}
+        {% include "public/css/screen.css" %}
       </style>
     {% endif %}
   </head>
@@ -29,9 +27,9 @@
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <nav>
         <p class="visually-hidden">Top level navigation menu</p>
-        <ul class="nav">
+        <ul>
           {%- for entry in collections.all | eleventyNavigation %}
-            <li class="nav-item">
+            <li>
               <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
             </li>
           {%- endfor %}

@@ -1,6 +1,6 @@
 ---
 layout: layouts/page.njk
-title: Now
+title: now
 eleventyNavigation:
   key: now
   order: 4
