@@ -32,11 +32,13 @@ let a = [0, 2, 5, 1, 15, 3];
 let b = [0, 1, 2, 3, 5, 15];
 ```
 
-Each of these arrays consists of six numbers, the same six numbers in this case. But an array can hold more than just numbers.
+Each of these arrays consists of six numbers, the same six numbers in this case. But an array can hold more than numbers.
 
 ```javascript
 let names = ["Pete", "Tom", "Jane", "Dwane", "Melanie"];
 ```
+
+<aside><p>The javascript engine does a lot of work to manage different types of data together this way for us. One of the things that makes some other languages "lower level" is that the programmer has to consider the differences between types and how to manage different types of data together, and they gain greater control over how they act on that data.<p></aside>
 
 In javascript, the arrays don't even all have to be of the same type!
 

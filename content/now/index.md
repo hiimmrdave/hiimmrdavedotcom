@@ -14,7 +14,7 @@ I'm a licensed veterinary technician. I provide advanced nursing care for dogs a
 
 Beyond veterinary medicine, my work interests include:
 
-- making onboarding smooth, easy, and consistent for new team members
+- making onboarding accommodating, smooth, and consistent for new team members
 - making expectations explicit so people can do their work with clarity
 - building a path for continued growth to keep talent in the field
 - empowering team members to problem solve before escalating
@@ -27,7 +27,7 @@ My fiancée and I are raising our three children, a fish, and sometimes a dog. S
 
 ## Projects
 
-Do I want to tie github in here? depends, can I `npm i eleventy-plugin-github-stuff`?
+Do I want to tie github in here? depends, can I `npm i -D eleventy-plugin-github-stuff`?
 
 ### Animal Drug Data
 

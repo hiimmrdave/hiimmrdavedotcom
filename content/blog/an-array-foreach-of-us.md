@@ -75,11 +75,11 @@ for (const index in colors) { // "index" is similar to the "i" of a for loop
 }
 ```
 
-To be fair, `for...in` loops are designed for iterating through the property names of objects, and they are very useful in that case. They just aren't ideal for arrays.
+To be fair, `for...in` loops are designed for iterating through the property names of objects, and they are very useful in that case. They weren't designed for arrays, and it shows through the extra steps needed to use them this way.
 
 ## `Array.forEach()`
 
-If we're playing "one of these things is not like the other," we've reached the one that doesn't belong. That's because `forEach` isn't a basic language feature like `for` or `while`. Instead, it's a "method", a function that belongs to a certain class of objects. It is available in most javascript environments, just like the others, but if it isn't we could write our own version to implement it in older browsers that don't support it!
+If we're playing "one of these things is not like the other," we've reached the one that doesn't belong. That's because `forEach` isn't a basic language feature like `for` or `while`. Instead, it's a "method", a function that belongs to a certain class of objects. It is available in most javascript environments, exactly like the others, but if it isn't we could write our own version to implement it in older browsers that don't support it!
 
 Let's start with a simple example:
 

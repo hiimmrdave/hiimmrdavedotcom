@@ -60,6 +60,7 @@
   --dkblue: hsl(220deg 70% 25%);
   --ltpurple: hsl(250deg 80% 75%);
   --purple: hsl(250deg 60% 55%);
+  --dkpurple: hsl(260deg 65% 20%);
   --ltpink: hsl(310deg 65% 75%);
 
   /* theme variable assignments */
@@ -153,6 +154,11 @@ footer {
   border-block-start: 1px dashed var(--color-border-accent)
 }
 
+footer>* {
+  margin-block: var(--size-2);
+  margin-inline: var(--size-1)
+}
+
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
 	clip: rect(0 0 0 0);
@@ -164,24 +170,46 @@ footer {
 	width: 1px;
 }
 
-main>*+*, main>article>*+* {
+main>*+*, main>article>*+*, main>section>*+* {
   margin-block-start: 1em;
 }
 
-article>:is(p,ol,ul) {
-  max-width: 80ch;
-  width: 100%;
+aside {
+  float: right;
+  max-width: 40ch;
+  margin: var(--size-2);
+  padding: var(--size-3);
+  background: hsla(250deg 30% 20% / 80%);
+}
+
+main :is(p,ol,ul) {
+  width: min(80ch, 100%);
   margin-inline: auto;
 }
 
-article>ul, article>ol {
+main :is(h1,h2,h3,h4) {
+  width: min(55rem, 100%);
+  margin-inline: auto;
+}
+
+main ul, main ol {
   padding-inline-start: 5ch;
 
 }
 
-article>p, article>ul li {
+main p, main ul li, main ol li {
 	line-height: var(--size-5);
   font-size: var(--size-3);
+}
+
+main aside {
+  border-radius: 0.5ch;
+  border-block: 1px dashed var(--color-border-accent)
+}
+
+main aside>p, main aside>ul{
+  font-size: var(--size-2);
+  opacity: 0.9;
 }
 
 h1,h2,h3,h4,.home-link {
@@ -343,12 +371,14 @@ header nav ul li a[href][aria-current="page"] {
 }
 
 /* Tags list */
-.post-metadata {
+main .post-metadata {
 	display: inline-flex;
 	flex-wrap: wrap;
 	gap: var(--size-1);
   font-size: var(--size-2);
 	list-style: none;
+  padding: 0;
+  margin-block: 0;
 }
 
 .post-metadata>*+* {
