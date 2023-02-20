@@ -144,6 +144,7 @@ footer {
   /* layout */
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   /* colors */
   background: var(--color-footer-background);
@@ -151,7 +152,8 @@ footer {
   2px 0 4px var(--color-ui-glow), 
   4px 0 8px var(--color-ui-glow), 
   8px 0 16px var(--color-ui-glow);
-  border-block-start: 1px dashed var(--color-border-accent)
+  border-block-start: 1px dashed var(--color-border-accent);
+  margin-block-start: var(--size-2);
 }
 
 footer>* {
@@ -183,11 +185,11 @@ aside {
 }
 
 main :is(p,ol,ul) {
-  width: min(80ch, 100%);
+  width: min(50rem, 100%);
   margin-inline: auto;
 }
 
-main :is(h1,h2,h3,h4) {
+main :is(h1,h2,h3,h4,hgroup) {
   width: min(55rem, 100%);
   margin-inline: auto;
 }
@@ -372,13 +374,13 @@ header nav ul li a[href][aria-current="page"] {
 
 /* Tags list */
 main .post-metadata {
-	display: inline-flex;
+	display: flex;
 	flex-wrap: wrap;
 	gap: var(--size-1);
   font-size: var(--size-2);
 	list-style: none;
   padding: 0;
-  margin-block: 0;
+  max-width: 80rem;
 }
 
 .post-metadata>*+* {
