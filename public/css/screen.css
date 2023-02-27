@@ -101,6 +101,10 @@
   max-width: 100%;
 }
 
+svg, svg * {
+  max-width: initial;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -124,7 +128,7 @@ header {
   0 4px 8px var(--color-ui-glow), 
   0 8px 16px var(--color-ui-glow);
 	border-block-end: 1px dashed var(--color-border-accent);
-}
+} 
 
 header>nav {
   flex-grow: 999;

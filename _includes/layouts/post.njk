@@ -11,7 +11,7 @@ layout: layouts/base.njk
     {%- for tag in tags | filterTagList %}
       {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
       <li>
-        <a href="{{ tagUrl }}">{{ tag }}</a>
+        <a href="{{ tagUrl }}" rel="tag">{{ tag }}</a>
       </li>
     {%- endfor %}
   </ul>

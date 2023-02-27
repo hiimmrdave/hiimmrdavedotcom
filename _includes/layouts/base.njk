@@ -10,13 +10,13 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     {% if eleventy.env.runMode === "serve" %}
       {# External files (best with local dev server live reload) #}
-      <link rel="stylesheet" href="/css/code.css">
       <link rel="stylesheet" href="/css/screen.css">
+      <link rel="stylesheet" href="/css/code.css">
     {% else %}
       {# Inlined (fastest site performance in production) #}
       <style>
-        {% include "public/css/code.css" %}
         {% include "public/css/screen.css" %}
+        {% include "public/css/code.css" %}
       </style>
     {% endif %}
   </head>
@@ -42,12 +42,15 @@
     <footer>
       <small>
         <a href="https://hachyderm.io/@hiimmrdave" rel="me">mastodon</a>
-        | 
-                        found an error?
+        | found an error?
         <a href="https://github.com/hiimmrdave/hiimmrdavedotcom/blob/main/{{ page.inputPath }}">submit a correction</a>
       </small>
       <small>&#169; 2023 Mr. Dave</small>
     </footer>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/+esm'
+      mermaid.initialize({theme: "dark"});
+    </script>
   </body>
-  <!-- Current page: {{ page.url | htmlBaseUrl }} -->
+  <!-- Current page: {{ page.url | htmlBaseUrl }}  -->
 </html>
