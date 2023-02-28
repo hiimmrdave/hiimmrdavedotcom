@@ -1,6 +1,5 @@
 ---
 title: Dose Calculation
-draft: true
 mermaid: true
 ---
 

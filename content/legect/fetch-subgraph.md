@@ -1,6 +1,5 @@
 ---
 title: Fetch Subgraph
-draft: true
 mermaid: true
 ---
 
