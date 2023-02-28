@@ -47,10 +47,21 @@
       </small>
       <small>&#169; 2023 Mr. Dave</small>
     </footer>
-    <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/+esm'
-      mermaid.initialize({theme: "dark"});
-    </script>
+    {% if mermaid %}
+      <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/+esm'
+        mermaid.initialize({
+          theme: "base",
+          themeVariables: {
+            darkMode: true,
+            background: "#383545",
+            fontSize: "1rem",
+            primaryColor: "#383545",
+            fontFamily: "var(--font-family-sans)"
+          }
+        });
+      </script>
+    {% endif %}
   </body>
   <!-- Current page: {{ page.url | htmlBaseUrl }}  -->
 </html>

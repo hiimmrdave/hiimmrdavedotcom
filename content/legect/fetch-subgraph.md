@@ -1,12 +1,12 @@
 ---
 title: Fetch Subgraph
 draft: true
+mermaid: true
 ---
 
 ```mermaid
 flowchart LR
-  Start-->req
-  req[Request]-->load
+  Start--request-->load
   load[Loading...]
   load--fail--> fail(("Failure :("))
   load--succeed-->success(("yay!"))
