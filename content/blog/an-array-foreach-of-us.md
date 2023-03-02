@@ -6,7 +6,6 @@ tags:
   - data structure
   - array
   - javascript
-layout: layouts/post.njk
 ---
 
 The most basic use of an array is to do the same thing with each element of the array. Javascript provides several ways to do this, and which one you use is largely a matter of preference. Each of the examples below assumes the same array

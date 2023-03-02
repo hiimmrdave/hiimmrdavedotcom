@@ -6,7 +6,6 @@ tags:
   - terminal
   - command line
   - brain sprinkle
-layout: layouts/post.njk
 ---
 
 If you run a command in the terminal, you can pause it by pressing `ctrl+z`. To resume that command in the background, run `bg`. To bring that task back to the foreground later, run `fg`.

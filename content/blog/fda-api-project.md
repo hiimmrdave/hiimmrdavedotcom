@@ -6,20 +6,38 @@ tags:
  - project
  - veterinary medicine
  - APIs
-layout: layouts/post.njk
+mermaid: true
 ---
 
 ## Scratch your own itch
 
-Every day I calculate anesthetic doses for dogs and cats. More precisely, every day I enter a few pieces of patient data into a spreadsheet and let Excel suggest anesthetic doses for dogs and cats. There will always be an element of human judgment involved, but calculating the baseline doses is much easier for a computer than it is for me at 7:30 in the morning. The spreadsheet I made calculates typical doses for every anesthetic and emergency drug that we have available. It's fine, but I think I can do better.
+Every day I calculate anesthetic doses for dogs and cats. More precisely, every day I enter a few pieces of patient data into a spreadsheet and let Excel suggest anesthetic doses for dogs and cats. There will always be an element of human judgment involved, but calculating the baseline doses is much easier for a computer than it is for me at <time datetime="07:30">7:30 in the morning</time>. The spreadsheet I made calculates typical doses for every anesthetic and emergency drug that we have available. It's fine, but I think I can do better.
 
 ## Getting the data
 
-The <abbr title="Food and Drug Administration">FDA</abbr> has a set of APIs for getting data about drugs. Most of the anesthetics we use in veterinary medicine are labeled for human use, so they are available via the [openFDA NDC API](https://open.fda.gov/apis/drug/ndc/). <abbr title="National Drug Code">NDC</abbr>s for veterinary-only products aren't available via the API, so I'll provide a means to enter the data manually if it isn't already available. In the future, I would like to offer search by additional fields, like active ingredient or trade name, but the FDA API provides the quickest path to a working prototype.
+The FDA has a set of API for getting data about drugs. Most of the anesthetics we use in veterinary medicine are labeled for human use, so they are available via the [openFDA NDC API](https://open.fda.gov/apis/drug/ndc/). NDC for veterinary-only products aren't available via the API, so I'll provide a means to enter the data manually if it isn't already available. In the future, I would like to offer search by additional fields, like active ingredient or trade name, but the FDA API provides the quickest path to a working prototype.
 
 For each drug saved, I will have to provide a list of doses that are typically used in my facility. This can be provided at any time, but storing it in advance will allow the output to have sane defaults. The anesthetic plan builder will also provide a means to override and provide arbitrary dosing while offering a warning if the entered dose is outside of the expected range.
 
-![A state chart diagram showing the user flow through the data search and entry interface](/img/add-drug-flow.png)
+```mermaid
+flowchart TB
+  Start-->methodPick
+  methodPick[[Entry Method Picker]]
+  methodPick--Enter drug details manually-->manualEntry
+  manualEntry[[Manual Entry Form]]
+  methodPick--Look up drug by code-->APILookup
+  APILookup[[Drug Search Form]]
+  APILookup-->APIFetch
+  APIFetch((Data Fetch\nSubgraph))
+  APIFetch--Success-->drugValidate
+  APIFetch--Failure-->APILookup
+  manualEntry-->drugValidate
+  drugValidate[[Drug Data Validator]]
+  drugValidate--Success-->done
+  drugValidate--Failure-->methodPick
+  drugValidate--more-->methodPick
+  done(((done)))
+```
 
 ## Keeping the data
 
@@ -40,3 +58,7 @@ Then enter patient data and receive calculated dosing for the selected drugs, an
 ![A rough example of the printable output contains a patient named "Fluffy" belonging to Davey Jones, weighing 66 lbs, along with signalment and an example anesthetic drug protocol](/img/dosing-sample-output.png)
 
 The project is already started on GitHub at <http://hiimmrdave.github.io/dosing>. I'll write more about my planning and implementation as I work through it.
+
+*[NDC]: National Drug Code
+*[FDA]: United States Food and Drug Administration
+*[API]: Application Programming Interface

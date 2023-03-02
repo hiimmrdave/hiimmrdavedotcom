@@ -6,7 +6,6 @@ tags:
   - data structure
   - array
   - javascript
-layout: layouts/post.njk
 ---
 
 ## The first non-primitive data type
