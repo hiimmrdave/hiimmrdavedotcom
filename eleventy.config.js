@@ -2,12 +2,16 @@ const { DateTime } = require("luxon");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItFootnote = require("markdown-it-footnote");
 const markdownItAttrs = require("markdown-it-attrs");
+const markdownItAbbr = require("markdown-it-abbr");
+const markdownItDeflist = require("markdown-it-deflist");
+const markdownItCollapsible = require("./markdown-it-collapsible");
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginInclusiveLang = require("@11ty/eleventy-plugin-inclusive-language");
 const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
+const pluginEmoji = require("eleventy-plugin-emoji");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
@@ -38,6 +42,7 @@ module.exports = function (eleventyConfig) {
 
   // Unofficial plugins
   eleventyConfig.addPlugin(pluginMermaid);
+  eleventyConfig.addPlugin(pluginEmoji);
 
   // Filters
   eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
@@ -98,7 +103,10 @@ module.exports = function (eleventyConfig) {
         slugify: eleventyConfig.getFilter("slugify"),
       })
       .use(markdownItAttrs)
-      .use(markdownItFootnote);
+      .use(markdownItFootnote)
+      .use(markdownItAbbr)
+      .use(markdownItDeflist)
+      .use(markdownItCollapsible);
   });
 
   // Features to make your build faster (when you need them)
