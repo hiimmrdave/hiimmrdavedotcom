@@ -8,7 +8,7 @@ I'm mostly curious how the whole footnotes^[This is the part that gets added bel
 
 If I write additional[^extra] notes in a separate paragraph then I can [^1] reference them below. What happens if I don't respect the auto-numbering?
 
-If I go on to add add'l footnotes, what happens then?[^1]
+If I go on to add add'l references to existing footnotes, what happens then?[^1][^extra]
 
 Areas of interest:
 
@@ -25,11 +25,66 @@ this
 
 ## TODO
 
-Fix CSS for definition lists
+> - Fix CSS for definition lists
+> - and block-quotes
+> - and probably block-quote lists
 
 ```mermaid
 flowchart LR
 A --> B
+```
+
+## *Italic* **bold** ***both*** none
+
+*italic* **bold** ***both*** none
+
+``` {style="font-style:italic;"}
+italic
+```
+
+``` {style="font-weight:bold;"}
+bold
+```
+
+``` {style="font-style:italic;font-weight:bold;"}
+bold italic
+```
+
+``` {tabindex}
+none
+```
+
+```ts
+//monocomment
+
+/** doc comment
+ * multiline magic in editor
+ * aligns text and gives pretty margin
+ */
+
+/* multiline magic doesn't happen
+in regular multiline comments */
+
+function makeBeer({yeast, grains, water, time}: BeerRecipe): beer {
+  return yeast + ...grains + water * time;
+}
+
+interface BeerRecipe {
+  yeast: Yeast;
+  grains: Grain[];
+  water: number;
+  time: number;
+}
+
+interface Yeast {
+  species: string;
+  quantity: number;
+}
+
+interface Grain {
+  species: string;
+  quantity: number;
+}
 ```
 
 *[add'l]: additional
