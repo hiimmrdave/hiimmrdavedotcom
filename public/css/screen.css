@@ -1,28 +1,28 @@
 /* mr. dave's own self-hosted type */
 @font-face {
   font-family: "Inter";
-  src: local("Inter"), url("../fonts/Inter-Light-subset.woff2") format("woff2"), url("public/fonts/Inter-subset.woff") format("woff");
+  src: local("Inter"), url("/fonts/Inter-Light-subset.woff2") format("woff2"), url("public/fonts/Inter-subset.woff") format("woff");
   unicode-range: U+20-7E,U+A9,U+E9;
   font-weight: 300;
 }
 
 @font-face {
   font-family: "Inter";
-  src: local("Inter"), url("../fonts/Inter-Bold-subset.woff2") format("woff2");
+  src: local("Inter"), url("/fonts/Inter-Bold-subset.woff2") format("woff2");
   unicode-range: U+20-7E,U+A9,U+E9;
   font-weight: 700;
 }
 
 @font-face {
   font-family: "EB Garamond";
-  src: local("EB Garamond"), url("../fonts/EBGaramond-Regular-subset.woff2") format("woff2");
+  src: local("EB Garamond"), url("/fonts/EBGaramond-Regular-subset.woff2") format("woff2");
   unicode-range: U+20-7E,U+A9,U+E9;
   font-weight: 400;
 }
 
 @font-face {
   font-family: "EB Garamond";
-  src: local("EB Garamond"), url("../fonts/EBGaramond-Italic-subset.woff2") format("woff2");
+  src: local("EB Garamond"), url("/fonts/EBGaramond-Italic-subset.woff2") format("woff2");
   unicode-range: U+20-7E,U+A9,U+E9;
   font-style: italic;
   font-weight: 400;
@@ -30,14 +30,14 @@
 
 @font-face {
   font-family: "EB Garamond";
-  src: local("EB Garamond"), url("../fonts/EBGaramond-ExtraBold-subset.woff2") format("woff2");
+  src: local("EB Garamond"), url("/fonts/EBGaramond-ExtraBold-subset.woff2") format("woff2");
   unicode-range: U+20-7E,U+A9,U+E9;
   font-weight: 800;
 }
 
 @font-face {
   font-family: "EB Garamond";
-  src: local("EB Garamond"), url("../fonts/EBGaramond-BoldItalic-subset.woff2") format("woff2");
+  src: local("EB Garamond"), url("/fonts/EBGaramond-BoldItalic-subset.woff2") format("woff2");
   unicode-range: U+20-7E,U+A9,U+E9;
   font-style: italic;
   font-weight: 700;
@@ -45,14 +45,14 @@
 
 @font-face {
   font-family: "Source Code Pro";
-  src: local("Source Code Pro"), url("../fonts/SourceCodePro-SemiBoldItalic-subset.woff2") format("woff2");
+  src: local("Source Code Pro"), url("/fonts/SourceCodePro-SemiBoldItalic-subset.woff2") format("woff2");
   unicode-range: U+20-7E,U+A9,U+E9;
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Source Code Pro";
-  src: local("Source Code Pro"), url("../fonts/SourceCodePro-LightItalic-subset.woff2") format("woff2");
+  src: local("Source Code Pro"), url("/fonts/SourceCodePro-LightItalic-subset.woff2") format("woff2");
   unicode-range: U+20-7E,U+A9,U+E9;
   font-style: italic;
   font-weight: 300;
@@ -60,14 +60,14 @@
 
 @font-face {
   font-family: "Source Code Pro";
-  src: local("Source Code Pro"), url("../fonts/SourceCodePro-Bold-subset.woff2") format("woff2");
+  src: local("Source Code Pro"), url("/fonts/SourceCodePro-Bold-subset.woff2") format("woff2");
   unicode-range: U+20-7E,U+A9,U+E9;
   font-weight: 700;
 }
 
 @font-face {
   font-family: "Source Code Pro";
-  src: local("Source Code Pro"), url("../fonts/SourceCodePro-SemiBoldItalic-subset.woff2") format("woff2");
+  src: local("Source Code Pro"), url("/fonts/SourceCodePro-SemiBoldItalic-subset.woff2") format("woff2");
   unicode-range: U+20-7E,U+A9,U+E9;
   font-style: italic;
   font-weight: 600;

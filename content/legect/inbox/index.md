@@ -15,3 +15,14 @@ draft: true
 > - The XLink namespace is: `http://www.w3.org/1999/xlink`
 > - The XML namespace is: `http://www.w3.org/XML/1998/namespace`
 > - The XMLNS namespace is: `http://www.w3.org/2000/xmlns/`
+
+## PWA-ification?
+
+<https://sparkbox.com/foundry/eleventy_starter_repo_series_teaches_progressive_web_app_support_PWA>
+
+- robots.txt done
+- <https://tiny-helpers.dev/favicons/> input SVG, get multiple size/formats
+  - favicon.svg / favicon.png
+  - apple-touch-icon
+  - maskable icon
+  - splash screen icon

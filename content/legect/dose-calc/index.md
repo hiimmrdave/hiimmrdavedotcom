@@ -1,7 +1,10 @@
 ---
 title: Dose Calculation
 mermaid: true
+draft: true
 ---
+
+<!--TODO: retired page tag/front-matter key? draft: true to hide for now.-->
 
 ```mermaid
 flowchart TB
