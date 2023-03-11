@@ -54,7 +54,7 @@
   font-family: "Source Code Pro";
   src: local("Source Code Pro"), url("/fonts/SourceCodePro-LightItalic-subset.woff2") format("woff2");
   unicode-range: U+20-7E,U+A9,U+E9;
-  font-style: italic;
+  font-style: "italic";
   font-weight: 300;
 }
 
@@ -69,7 +69,7 @@
   font-family: "Source Code Pro";
   src: local("Source Code Pro"), url("/fonts/SourceCodePro-SemiBoldItalic-subset.woff2") format("woff2");
   unicode-range: U+20-7E,U+A9,U+E9;
-  font-style: italic;
+  font-style: "italic";
   font-weight: 600;
 }
 
@@ -230,13 +230,8 @@ aside {
   background: hsla(250deg 30% 20% / 80%);
 }
 
-main :is(p,ol,ul,details,table,hr) {
-  width: min(50rem, 100%);
-  margin-inline: auto;
-}
-
 main :is(h1,h2,h3,h4,hgroup) {
-  width: min(55rem, 100%);
+  padding-inline-start: -3em;
   margin-inline: auto;
 }
 
@@ -278,6 +273,10 @@ h1 {
 
 h2 {
   font-size: var(--size-5);
+}
+
+dd {
+  padding-inline-start: 3ch;
 }
 
 a[href] {
@@ -446,7 +445,7 @@ main .post-metadata {
 }
 
 pre[class*="language-diff-"] {
-	--eleventy-code-padding: 1.25em;
+	--eleventy-code-padding: 1.25rem;
 
 	padding-left: var(--eleventy-code-padding);
 	padding-right: var(--eleventy-code-padding);

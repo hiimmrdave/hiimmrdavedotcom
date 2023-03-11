@@ -43,6 +43,11 @@
               <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
             </li>
           {%- endfor %}
+          {% if eleventy.env.runMode === "serve" %}
+            <li>
+              <a href="/legect">legect</a>
+            </li>
+          {% endif %}
         </ul>
       </nav>
     </header>
