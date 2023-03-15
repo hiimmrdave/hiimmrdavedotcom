@@ -29,6 +29,7 @@
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+    "@11ty/eleventy-plugin-webc": "^0.9.3",
     "@kevingimbel/eleventy-plugin-mermaid": "^2.0.2",
     "eleventy-plugin-emoji": "^1.1.0",
     "luxon": "^3.2.1",

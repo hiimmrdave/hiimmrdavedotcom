@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html :lang="language">
+  <head>
+    <script webc:setup>
+      const { title, language, description } = metadata,
+        { generator } = eleventy;
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" :content="description" />
+    <link
+      rel="alternate"
+      href="/feed/feed.xml"
+      type="application/atom+xml"
+      :title="title"
+    />
+    <link
+      rel="alternate"
+      href="/feed/feed.json"
+      type="application/json"
+      :title="title"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="194x194"
+      href="/favicon-194x194.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-chrome-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#585768" />
+    <meta name="msapplication-TileColor" content="#585768" />
+    <meta name="theme-color" content="#585768" />
+    <meta name="generator" :content="generator" />
+    <link rel="stylesheet" href="/css/screen.css" webc:keep />
+    <link rel="stylesheet" href="/css/code.css" webc:keep />
+    <title @text="title"></title>
+  </head>
+  <body @html="content"></body>
+</html>

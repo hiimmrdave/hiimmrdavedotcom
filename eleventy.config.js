@@ -12,6 +12,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginInclusiveLang = require("@11ty/eleventy-plugin-inclusive-language");
 const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
 const pluginEmoji = require("eleventy-plugin-emoji");
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
@@ -32,6 +33,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(require("./eleventy.config.images.js"));
 
   // Official plugins
+  eleventyConfig.addPlugin(pluginWebc, {
+    components: "_includes/components/*.webc",
+  });
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight, {
     preAttributes: { tabindex: 0 },
@@ -120,7 +124,7 @@ module.exports = function (eleventyConfig) {
   return {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
-    templateFormats: ["md", "njk", "html", "liquid"],
+    templateFormats: ["md", "njk", "html", "webc", "liquid"],
 
     // Pre-process *.md files with: (default: `liquid`)
     markdownTemplateEngine: "njk",

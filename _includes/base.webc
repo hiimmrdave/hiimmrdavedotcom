@@ -1,0 +1,22 @@
+---
+layout: root.webc
+---
+
+<script webc:setup>
+  const { inputPath } = page;
+  const gitLink = `https://github.com/hiimmrdave/hiimmrdavedotcom/blob/main/${inputPath}`;
+</script>
+<a href="#skip" class="visually-hidden">Skip to main content</a>
+<header><a href="/" class="home-link" @text="metadata.title"></a></header>
+<main id="skip">
+  <h1 @text="title"></h1>
+  <div @html="content" webc:nokeep></div>
+</main>
+<footer>
+  <small>
+    <a href="https://hachyderm.io/@hiimmrdave" rel="me">mastodon</a>
+    | found an error?
+    <a :href="gitLink">submit a correction</a>
+  </small>
+  <small>&#169; 2023 Mr. Dave</small>
+</footer>
