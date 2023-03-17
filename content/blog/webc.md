@@ -8,3 +8,4 @@ draft: true
 ## Behold
 
 A man!
+<postlist />

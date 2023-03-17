@@ -45,5 +45,5 @@
     <link rel="stylesheet" href="/css/code.css" webc:keep />
     <title @text="title"></title>
   </head>
-  <body @html="content"></body>
+  <body @html="content" />
 </html>
