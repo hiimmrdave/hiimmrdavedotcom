@@ -1,6 +1,7 @@
 ---
 title: ok
 layout: layouts/page.njk
+draft: true
 ---
 
 - [inbox](inbox/)

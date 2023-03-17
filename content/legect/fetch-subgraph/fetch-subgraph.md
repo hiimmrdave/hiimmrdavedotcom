@@ -1,6 +1,7 @@
 ---
 title: Fetch Subgraph
 mermaid: true
+draft: true
 ---
 
 ```mermaid
