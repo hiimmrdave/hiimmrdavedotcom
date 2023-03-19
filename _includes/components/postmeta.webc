@@ -1,0 +1,15 @@
+<ul class="post-metadata">
+  <li>
+    <time :datetime="page.date" @text="page.date"></time>
+  </li>
+  <li>{%- for tag in tags | filterTagList %}</li>
+  <li>{%- set tagUrl %}</li>
+  <li>/tags/</li>
+  <li>{{ tag | slugify }}</li>
+  <li>/</li>
+  <li>{% endset %}</li>
+  <li>
+    <a :href="tagUrl" rel="tag">{{ tag }}</a>
+  </li>
+  <li>{%- endfor %}</li>
+</ul>

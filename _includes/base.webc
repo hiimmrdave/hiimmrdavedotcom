@@ -9,7 +9,6 @@ layout: root.webc
 <a href="#skip" class="visually-hidden">Skip to main content</a>
 <siteheader></siteheader>
 <main id="skip">
-  <h1 @text="title"></h1>
   <div @html="content" webc:nokeep></div>
 </main>
 <sitefooter></sitefooter>

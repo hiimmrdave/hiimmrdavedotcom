@@ -1,24 +1,22 @@
 <script webc:setup>
   const postsCount = collections.posts.length;
   const latestPostsCount = Math.min(postsCount, 3);
-  function identity(input) {
-    return input;
-  }
 </script>
 <ol
   reversed
   class="postlist"
-  :style="`counter-reset: start-from ${(postsCount)}`"
+  :style="`counter-reset: start-from ${(postsCount+1)}`"
 >
   <script webc:type="js">
     collections.posts
-      .map((post) => {
-        return identity(`<li class="postlist-item">
-  <a href="${post.url}">${post.data.title}</a>
-  <time class="postlist-date" datetime="${post.date}">${post.date}</time>
-</li>`);
-      })
       .slice(-3)
+      .map((post) => {
+        return `<li class="postlist-item">
+  <a href="${post.url}" class="postlist-link">${post.data.title}</a>
+  <time class="postlist-date" datetime="${post.date}">${post.date}</time>
+</li>`;
+      })
+      .reverse()
       .join("\n");
   </script>
 </ol>

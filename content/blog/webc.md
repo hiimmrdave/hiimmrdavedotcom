@@ -1,19 +1,23 @@
 ---
 title: building with webc
 description: I don't know if this gets used
-layout: base.webc
+layout: post.webc
 ---
 
 ## Behold
 
 A man!
 
+<small>that's a joke about Diogenes</small>
+
+This one post is using the webc-based layout chain. The goal is to create feature parity with the other pages on the site, then gradually pull out the nunjucks.
+
 <postlist></postlist>
 
 ## TODO
 
-- make that list be in correct order
+- <del>make that list be in correct order</del>
 - props for how many history posts, from specific tags, other features?
-- navigation in webc
-- date and other filtering in webc
-- slide luxon out of there maybe possibly please maybe?
+- navigation
+- date formats
+- how tags work

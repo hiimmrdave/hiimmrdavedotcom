@@ -1,0 +1,9 @@
+---
+layout: base.webc
+---
+
+<article class="blog-post">
+  <h1 @text="title"></h1>
+  <postmeta></postmeta>
+  <div @html="content" webc:nokeep></div>
+</article>
