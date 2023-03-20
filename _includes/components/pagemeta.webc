@@ -2,5 +2,5 @@
   <li>
     <pagetime></pagetime>
   </li>
-  <pagetags></pagetags>
+  <pagetags webc:nokeep></pagetags>
 </ul>
