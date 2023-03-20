@@ -1,0 +1,4 @@
+<time
+  :datetime="page.date.toISOString();"
+  @text="page.date.toLocaleDateString( 'en-US', { month: 'long', year:'numeric'});"
+></time>

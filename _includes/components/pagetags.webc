@@ -1,0 +1,10 @@
+<script webc:setup>
+  // include this component inside of an <ol> on the host page
+  const { tags } = page;
+</script>
+<script webc:type="js">
+  filterTagList(tags).map( (e) => 
+    `<li><a href="/tags/${slugify(e)}/" rel="tag">${e}</a></li>`
+  )
+  .join("\n");
+</script>

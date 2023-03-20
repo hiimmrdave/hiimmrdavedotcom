@@ -2,6 +2,11 @@
 title: building with webc
 description: I don't know if this gets used
 layout: post.webc
+tags:
+  - webc
+  - blog meta
+  - rough draft
+  - learning in commit history
 ---
 
 ## Behold
@@ -19,5 +24,9 @@ This one post is using the webc-based layout chain. The goal is to create featur
 - <del>make that list be in correct order</del>
 - props for how many history posts, from specific tags, other features?
 - navigation
-- date formats
-- how tags work
+- <del>date formats<del>
+- <del>how tags work</del>
+- optionally pull some localization and other options from metadata
+- package up changes
+
+I'm cracking away at this on the side. I'm motivated by the challenge and also I have other responsibilities.

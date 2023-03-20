@@ -4,6 +4,6 @@ layout: base.webc
 
 <article class="blog-post">
   <h1 @text="title"></h1>
-  <postmeta></postmeta>
+  <pagemeta></pagemeta>
   <div @html="content" webc:nokeep></div>
 </article>
