@@ -3,9 +3,9 @@
     prevPostIndex = postIndex - 1,
     nextPostIndex = postIndex + 1,
     prevTitle = collections.posts[prevPostIndex]?.data.title,
-    prevUrl = collections.posts[prevPostIndex]?.data.title,
+    prevUrl = collections.posts[prevPostIndex]?.url,
     nextTitle = collections.posts[nextPostIndex]?.data.title,
-    nextUrl = collections.posts[nextPostIndex]?.data.title;
+    nextUrl = collections.posts[nextPostIndex]?.url;
 </script>
 <ul webc:if="prevTitle || nextTitle" class="links-nextprev">
   <li webc:if="prevTitle">
