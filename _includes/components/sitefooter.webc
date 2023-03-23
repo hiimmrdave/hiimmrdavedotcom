@@ -5,6 +5,10 @@
   <small>
     <a href="https://hachyderm.io/@hiimmrdave" rel="me">mastodon</a>
     | found an error?
-    <a href="https://github.com/hiimmrdave/hiimmrdavedotcom/blob/main/{{ page.inputPath }}">submit a correction</a>
-  </small><slot></slot><small>&copy; <span webc:nokeep @text="copyYear"></span> Mr. Dave</small>
+    <a
+      :href="`https://github.com/hiimmrdave/hiimmrdavedotcom/blob/main/${ page.inputPath }`"
+      >submit a correction</a
+    > </small
+  ><slot></slot
+  ><small>&copy; <span webc:nokeep @text="copyYear"></span> Mr. Dave</small>
 </footer>
