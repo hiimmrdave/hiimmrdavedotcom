@@ -1,0 +1,19 @@
+<script webc:setup>
+  const postIndex = getCollectionItemIndex(collections.posts, page),
+    prevPostIndex = postIndex - 1,
+    nextPostIndex = postIndex + 1,
+    prevTitle = collections.posts[prevPostIndex]?.data.title,
+    prevUrl = collections.posts[prevPostIndex]?.data.title,
+    nextTitle = collections.posts[nextPostIndex]?.data.title,
+    nextUrl = collections.posts[nextPostIndex]?.data.title;
+</script>
+<ul webc:if="prevTitle || nextTitle" class="links-nextprev">
+  <li webc:if="prevTitle">
+    Previous:
+    <a @text="prevTitle" :href="prevUrl"></a>
+  </li>
+  <li webc:if="nextTitle">
+    Next:
+    <a @text="nextTitle" :href="nextUrl"></a>
+  </li>
+</ul>

@@ -1,12 +1,9 @@
 <script webc:setup>
   const postsCount = collections.posts.length;
   const latestPostsCount = Math.min(postsCount, 3);
+  const postlistStyle = `counter-reset: start-from ${postsCount + 1}`;
 </script>
-<ol
-  reversed
-  class="postlist"
-  :style="`counter-reset: start-from ${(postsCount+1)}`"
->
+<ol reversed class="postlist" :style="postlistStyle">
   <script webc:type="js">
     collections.posts
       .slice(-3)

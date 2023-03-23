@@ -24,7 +24,10 @@ This one post is using the webc-based layout chain. The goal is to create featur
 - <del>make that list be in correct order</del>
 - props for how many history posts, from specific tags, other features?
 - <del>header navigation</del>
-- blog post next/previous links
+- <del>blog post next/previous links</del>
+  - <del>sort of, I dropped them in a webc wrapper</del>
+- how am I intended to access/call global filters from webC?
+  - my problem or upstream bug with this.page.lang and getLocaleCollectionItem? probably me.
 - do some collections merit their own next/back separate from chronology?
 - <del>date formats<del>
 - <del>how tags work</del>

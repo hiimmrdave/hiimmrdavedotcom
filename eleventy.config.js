@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
 
   // Official plugins
   eleventyConfig.addPlugin(pluginWebc, {
-    components: "_includes/components/*.webc",
+    components: "_includes/components/**/*.webc",
   });
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight, {
