@@ -1,10 +1,14 @@
 <script webc:type="js" webc:is="template">
-  let postIndex = getCollectionItemIndex(collections.posts, page),
-    previousPost = postIndex > 0 ? collections.posts[postIndex - 1] : false,
-    nextPost =
-      postIndex + 1 < collections.posts.length
-        ? collections.posts[postIndex + 1]
-        : false,
+  let previousPost = getPreviousCollectionItem(
+      collections.posts,
+      page,
+      metadata.language
+    ),
+    nextPost = getNextCollectionItem(
+      collections.posts,
+      page,
+      metadata.language
+    ),
     preiousPostHtml = previousPost
       ? `<li>Previous: <a href="${previousPost.url}">${previousPost.data.title}</a></li>`
       : ``,
