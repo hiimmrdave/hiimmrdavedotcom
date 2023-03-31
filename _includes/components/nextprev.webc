@@ -1,35 +1,17 @@
-<script webc:setup>
-  //TODO: parameterize collection (collections.posts good default)
-
-  const prevPostTitle = getPreviousCollectionItem(
-      collections.posts,
-      page,
-      metadata.language
-    )?.data.title,
-    nextPostTitle = getNextCollectionItem(
-      collections.posts,
-      page,
-      metadata.language
-    )?.data.title,
-    prevPostUrl = getPreviousCollectionItem(
-      collections.posts,
-      page,
-      metadata.language
-    )?.url,
-    nextPostUrl = getNextCollectionItem(
-      collections.posts,
-      page,
-      metadata.language
-    )?.url;
-  // I don't know why I can't call each one and access properties of their return objects.
+<script webc:type="js" webc:is="template">
+  let postIndex = getCollectionItemIndex(collections.posts, page),
+    previousPost = postIndex > 0 ? collections.posts[postIndex - 1] : false,
+    nextPost =
+      postIndex + 1 < collections.posts.length
+        ? collections.posts[postIndex + 1]
+        : false,
+    preiousPostHtml = previousPost
+      ? `<li>Previous: <a href="${previousPost.url}">${previousPost.data.title}</a></li>`
+      : ``,
+    nextPostHtml = nextPost
+      ? `<li>Next: <a href="${nextPost.url}">${nextPost.data.title}</a></li>`
+      : ``;
+  previousPost || nextPost
+    ? `<ul class="links-nextprev">${preiousPostHtml}${nextPostHtml}</ul>`
+    : ``;
 </script>
-<ul webc:if="prevPostTitle || nextPostTitle" class="links-nextprev">
-  <li webc:if="prevPostTitle">
-    Previous:
-    <a @text="prevPostTitle" :href="prevPostUrl"></a>
-  </li>
-  <li webc:if="nextPostTitle">
-    Next:
-    <a @text="nextPostTitle" :href="nextPostUrl"></a>
-  </li>
-</ul>
