@@ -1,4 +1,4 @@
 module.exports = {
   tags: ["posts"],
-  layout: "post.webc",
+  layout: "layouts/post.njk",
 };
