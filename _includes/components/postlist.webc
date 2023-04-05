@@ -1,16 +1,29 @@
 <script webc:setup>
-  const postsCount = collections.posts.length;
-  const latestPostsCount = Math.min(postsCount, 3);
+  const collection = collections.posts; // how do I set this from props?
+  const postsCount = collection.length;
   const postlistStyle = `counter-reset: start-from ${postsCount + 1}`;
 </script>
+
 <ol reversed class="postlist" :style="postlistStyle">
   <script webc:type="js">
-    collections.posts
-      .slice(-3)
+    const maxPostsToShow = parseInt(items, 10) || 3;
+    const postsToShow = Math.min(postsCount, maxPostsToShow);
+    const morePosts =
+      postsCount > postsToShow
+        ? `See more in the <a href="/blog">blog</a>.`
+        : ``; // catch 22 with setup/js (i think?)
+
+    collection
+      .slice(-1 * postsToShow)
       .map((post) => {
         return `<li class="postlist-item">
   <a href="${post.url}" class="postlist-link">${post.data.title}</a>
-  <pagetime></pagetime>
+  <time
+  datetime="${post.date.toISOString()}"
+>${post.date.toLocaleDateString("en-US", {
+          month: "long",
+          year: "numeric",
+        })}</time>
 </li>`;
       })
       .reverse()
