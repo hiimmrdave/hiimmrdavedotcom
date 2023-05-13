@@ -17,16 +17,16 @@ A man!
 
 This one post is using the webc-based layout chain. The goal is to create feature parity with the other pages on the site, then gradually pull out the nunjucks.
 
-<postlist items="4"></postlist>
+<postlist items="2" tag="posts"></postlist>
 
 ## TODO
 
 - <del>make that list be in correct order</del>
 - post list feature wants:
   - <del>number of posts (default 3?)</del>
-  - <del>show correct dates on post list<del>
-  - filter by tag (default to posts?)
-  - posts before and after a certain post (default to page if in the sequence?)
+  - <del>show correct dates on post list</del>
+  - <del>filter by tag (default to posts?)</del>
+  - "more" or whatever as a slot
 - post date/time feature:
   - take prop of ISO date string (generalize for current page or list of posts)
 - <del>header navigation</del>
