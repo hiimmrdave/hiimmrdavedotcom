@@ -1,36 +1,33 @@
-<template webc:nokeep>
+<ul>
   <script webc:type="js" webc:root>
-    const collectionName = tag === String(tag) && tag != "" ? tag : "posts";
-    const numberOfItems = parseInt(items, 10);
-    const maxPostsToShow = numberOfItems === Number(items) ? numberOfItems : 3;
-
+    const collectionName =
+      tag === String(tag) && tag !== "" ? tag : "javascript";
     const collection = collections[collectionName];
-    const postsCount = collection.length;
-    const postsToShow = Math.min(postsCount, maxPostsToShow);
-    const listPreamble = "<ul>";
-    const listEnd = "</ul>";
-    const morePosts =
-      postsCount > postsToShow
-        ? '<p>See more in the <a href="/blog">blog</a>.</p>'
-        : "";
+    const numberOfItems = parseInt(items, 10);
+    const maxItemsToShow = numberOfItems === Number(items) ? numberOfItems : 3;
+
+    const itemsCount = collection.length;
+    const itemsToShow = Math.min(itemsCount, maxItemsToShow);
+    const moreItems = itemsCount > itemsToShow;
     // This is where the output string happens
-    listPreamble +
-      collection
-        .slice(-1 * postsToShow)
-        .map((post) => {
-          return `<li>
-  <a href="${post.url}">${post.data.title}</a>
-  <time
-  datetime="${post.date.toISOString()}"
->${post.date.toLocaleDateString("en-US", {
+    collection
+      .slice(-1 * itemsToShow)
+      .map((item) => {
+        const { url, date } = item,
+          { title } = item.data;
+        const ISOString = date.toISOString(),
+          niceDate = item.date.toLocaleDateString("en-US", {
             month: "long",
             year: "numeric",
-          })}</time>
-</li>`;
-        })
-        .reverse()
-        .join("\n") +
-      listEnd +
-      morePosts;
+          });
+        return `<li>
+      <a href="${url}">${title}</a>
+      <pagetime @isostring=${ISOString} @displaystring="${niceDate}">
+    </li>`;
+      })
+      .reverse()
+      .join("\n");
   </script>
-</template>
+</ul>
+<p><slot>fallback?</slot></p>
+<p>this part comes after the slot, to be sure.</p>

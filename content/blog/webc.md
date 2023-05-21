@@ -17,7 +17,7 @@ A man!
 
 This one post is using the webc-based layout chain. The goal is to create feature parity with the other pages on the site, then gradually pull out the nunjucks.
 
-<postlist items="2" tag="posts"></postlist>
+<postlist items="2" tag="posts">More in the <a href="/blog">blog</a>.</postlist>
 
 ## TODO
 
