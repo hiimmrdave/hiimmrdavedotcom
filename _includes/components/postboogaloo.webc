@@ -1,0 +1,7 @@
+<template webc:root="override" webc:nokeep>
+  <ul>
+    <li webc:for="attr in webc.attributes" @text="JSON.stringify(attr)"></li>
+  </ul>
+  <p><slot>fallback?</slot></p>
+  <p>this part comes after the slot, to be sure.</p>
+</template>

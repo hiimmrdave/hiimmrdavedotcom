@@ -17,7 +17,7 @@ A man!
 
 This one post is using the webc-based layout chain. The goal is to create feature parity with the other pages on the site, then gradually pull out the nunjucks.
 
-<postlist items="2" tag="posts">More in the <a href="/blog">blog</a>.</postlist>
+<postlist items="2" tag="posts">More in the <a href="/blog">blog</a>.</postlist><postboogaloo @dave="dave"></postboogaloo>
 
 ## TODO
 
@@ -26,7 +26,8 @@ This one post is using the webc-based layout chain. The goal is to create featur
   - <del>number of posts (default 3?)</del>
   - <del>show correct dates on post list</del>
   - <del>filter by tag (default to posts?)</del>
-  - "more" or whatever as a slot
+  - <del>"more" or whatever as a slot</del>
+  - conditional rendering of "more" slot
 - post date/time feature:
   - take prop of ISO date string (generalize for current page or list of posts)
 - <del>header navigation</del>
