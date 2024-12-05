@@ -1,0 +1,142 @@
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: var(--light);
+  background: none;
+  font-family: var(--font-family-mono);
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  tab-size: 4;
+  hyphens: none;
+}
+
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+  background: var(--dark);
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  border-radius: .5em;
+  border: .3em solid hsl(0deg 0% 33%); /* #282A2B */
+  box-shadow: 1px 1px .5em black inset;
+  overflow: auto;
+  padding: 1em;
+}
+
+pre[class*="language-"]::selection {
+  background: hsl(200deg 4% 16%); /* #282A2B */
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: hsl(0deg 0% 93% / 15%); /* #EDEDED */
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  border-radius: .3em;
+  border: .13em solid var(--grey6);
+  box-shadow: 1px 1px .3em -.1em black inset;
+  padding: .15em .2em .05em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--grey3);
+}
+
+.token.punctuation {
+  opacity: .7;
+}
+
+.token.namespace {
+  opacity: .7;
+}
+
+.token.tag,
+.token.boolean,
+.token.number,
+.token.deleted {
+  color: var(--ltred);
+}
+
+.token.keyword,
+.token.property,
+.token.selector,
+.token.constant,
+.token.symbol,
+.token.builtin {
+  color: var(--ltlime);
+}
+
+.token.attr-name,
+.token.attr-value,
+.token.string,
+.token.char,
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable,
+.token.inserted {
+  color: var(--ltteal);
+}
+
+.token.atrule {
+  color: var(--ltblue);
+}
+
+.token.regex,
+.token.important {
+  color: var(--ltorange);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/* Markup */
+.language-markup .token.tag,
+.language-markup .token.attr-name,
+.language-markup .token.punctuation {
+  color: var(--ltbrown);
+}
+
+/* Make the tokens sit above the line highlight so the colours don't look faded. */
+.token {
+  position: relative;
+  z-index: 1;
+}
+
+.line-highlight.line-highlight {
+  background: hsl(0deg 0% 33% / 25%);
+  background: linear-gradient(to right, hsl(2500deg 13% 33% / 10%) 70%, hsl(250deg 13% 33% / 0%));
+  border-bottom: 1px dashed var(--grey6);
+  border-top: 1px dashed var(--grey6);
+  margin-top: var(--size-2);
+  z-index: 0;
+}
+
+.line-highlight.line-highlight::before,
+.line-highlight.line-highlight[data-end]::after {
+  background-color: var(--grey4);
+  color: var(--light);
+}

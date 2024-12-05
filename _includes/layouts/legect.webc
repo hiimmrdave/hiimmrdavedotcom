@@ -1,0 +1,13 @@
+---
+layout: layouts/base.webc
+draft: true
+---
+
+<script webc:setup>
+	const { title } = eleventy;
+</script>
+<h1 @text="title"></h1>
+<div @raw="content" webc:nokeep></div>
+<p>
+	<a href="/legect">out of my mind</a>
+</p>

@@ -1,0 +1,23 @@
+<script webc:setup>
+	const { runMode } = eleventy.env,
+		navItems = [
+			...eleventyNavigation(collections.all).map(
+				(navigationItem) => `<li>
+          <a href="${navigationItem.url}"${
+					navigationItem.url == page.url ? ` aria-current="page"` : ``
+				}>${navigationItem.title}</a>
+        </li>`
+			),
+			runMode == "serve"
+				? `<li>
+        <a href="/legect/">legect</a>
+      </li>`
+				: ``,
+		].join("");
+</script>
+<!--siteheadernav-->
+<nav>
+	<p class="visually-hidden">Top level navigation menu</p>
+	<ul @html="navItems"></ul>
+</nav>
+<!--/siteheadernav-->

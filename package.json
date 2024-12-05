@@ -1,0 +1,55 @@
+{
+	"name": "@11ty/eleventy-base-webc",
+	"version": "1.0.0",
+	"description": "A minimalist bare-bones starter project using Eleventy and WebC.",
+	"type": "module",
+	"scripts": {
+		"build": "npx @11ty/eleventy",
+		"start": "npx @11ty/eleventy --serve --quiet --incremental",
+		"debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+		"benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/11ty/eleventy-base-webc.git"
+	},
+	"author": {
+		"name": "Zach Leatherman",
+		"email": "zachleatherman@gmail.com",
+		"url": "https://zachleat.com/"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">=18"
+	},
+	"funding": {
+		"type": "opencollective",
+		"url": "https://opencollective.com/11ty"
+	},
+	"bugs": {
+		"url": "https://github.com/11ty/eleventy-base-webc/issues"
+	},
+	"homepage": "https://github.com/11ty/eleventy-base-webc#readme",
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-img": "^5.0.0",
+		"@11ty/eleventy-navigation": "^0.3.5",
+		"@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
+		"@11ty/eleventy-plugin-rss": "^2.0.2",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+		"@11ty/eleventy-plugin-webc": "^0.11.2",
+		"@kevingimbel/eleventy-plugin-mermaid": "^2.2.1",
+		"glob": "^11.0.0",
+		"markdown-it-abbr": "^2.0.0",
+		"markdown-it-anchor": "^9.2.0",
+		"markdown-it-attrs": "^4.2.0",
+		"markdown-it-deflist": "^3.0.0",
+		"markdown-it-footnote": "^4.0.0",
+		"rimraf": "^6.0.1",
+		"stylelint": "^16.11.0",
+		"stylelint-config-standard": "^36.0.1"
+	},
+	"dependencies": {
+		"@11ty/is-land": "^4.0.0"
+	}
+}

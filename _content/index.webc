@@ -1,0 +1,16 @@
+---
+layout: layouts/page.webc
+eleventyNavigation:
+  key: home
+  order: 1
+title: hi, i'm Mr. Dave!
+---
+
+<postlist></postlist>
+
+<!--- is-land: https://www.11ty.dev/docs/plugins/partial-hydration/ --->
+<!---
+  <is-land on:visible>
+    This is an island.
+  </is-land>
+--->

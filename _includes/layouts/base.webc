@@ -1,0 +1,15 @@
+<!doctype html>
+<html :lang="metadata.language">
+  <head>
+    <meta webc:is="headmeta"></meta><link rel="stylesheet" href="/css/screen.css"
+    /><link rel="stylesheet" href="/css/code.css" webc:keep
+    /><style webc:keep @raw="getBundle('css')"></style>
+  </head>
+  <body>
+    <a href="#skip" class="visually-hidden">Skip to main content</a>
+    <siteheader></siteheader>
+    <main id="skip" @raw="content"></main>
+    <sitefooter></sitefooter>
+    <script type="module" webc:keep @raw="getBundle('js')"></script>
+  </body>
+</html>
