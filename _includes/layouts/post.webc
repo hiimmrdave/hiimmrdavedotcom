@@ -2,20 +2,6 @@
 layout: layouts/base.webc
 ---
 
-<script webc:setup>
-  //TODO: parameterize collection (collections.posts good default)
-
-  const prevPost = getPreviousCollectionItem(
-      collections.posts,
-      page,
-      metadata.language
-    ),
-    nextPost = getNextCollectionItem(
-      collections.posts,
-      page,
-      metadata.language
-    );
-</script>
 <article class="blog-post">
   <h1 @text="title"></h1>
   <ul class="post-metadata">
@@ -35,4 +21,22 @@ layout: layouts/base.webc
   </ul>
   <div @html="content" webc:nokeep></div>
 </article>
-<nextprev></nextprev>
+<template webc:type="11ty" 11ty:type="njk">
+  {%- if collections.posts %} {%- set previousPost = collections.posts |
+  getPreviousCollectionItem %} {%- set nextPost = collections.posts |
+  getNextCollectionItem %} {%- if nextPost or previousPost %}
+  <ul class="links-nextprev">
+    {%- if previousPost %}
+    <li>
+      Previous:
+      <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+    </li>
+    {% endif %} {%- if nextPost %}
+    <li>
+      Next:
+      <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+    </li>
+    {% endif %}
+  </ul>
+  {%- endif %} {%- endif %}
+</template>
