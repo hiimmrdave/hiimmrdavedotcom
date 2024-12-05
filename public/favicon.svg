@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100">
-  <circle cx="0" cy="0" r="44" fill="white" />
-  <path fill="none" stroke="black" stroke-width="1" stroke-linecap="round"
-    d="M -25,-25 c 8,12 12,33 12,40 M -35,-20 c 20,-20 40,-10 45,10 s -20,30 -30,30 -10,-10 0,-15 25,0 35,25 c 10,-25 15,-30 25,-40" />
-</svg>
