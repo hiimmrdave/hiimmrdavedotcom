@@ -2,6 +2,12 @@
 layout: layouts/base.webc
 ---
 
+<script webc:setup>
+  const prevPost = (post) =>
+      getPreviousCollectionItem(collections.posts, post, metadata.language),
+    nextPost = (post) =>
+      getNextCollectionItem(collections.posts, post, metadata.language);
+</script>
 <article class="blog-post">
   <h1 @text="title"></h1>
   <ul class="post-metadata">
@@ -21,22 +27,25 @@ layout: layouts/base.webc
   </ul>
   <div @html="content" webc:nokeep></div>
 </article>
-<template webc:type="11ty" 11ty:type="njk">
-  {%- if collections.posts %} {%- set previousPost = collections.posts |
-  getPreviousCollectionItem %} {%- set nextPost = collections.posts |
-  getNextCollectionItem %} {%- if nextPost or previousPost %}
-  <ul class="links-nextprev">
-    {%- if previousPost %}
-    <li>
-      Previous:
-      <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-    </li>
-    {% endif %} {%- if nextPost %}
-    <li>
-      Next:
-      <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-    </li>
-    {% endif %}
-  </ul>
-  {%- endif %} {%- endif %}
-</template>
+<ul class="links-nextprev">
+  <script webc:type="js">
+    if (collections.posts) {
+      const prev = prevPost(this.page);
+      prev?.data.title
+        ? `<li class="nextprev-prev">← Previous<br
+          /><a href="${prev.url}">${prev.data.title}</a
+          ></li>`
+        : ``;
+    }
+  </script>
+  <script webc:type="js">
+    if (collections.posts) {
+      const next = nextPost(this.page);
+      next?.data.title
+        ? `<li class="nextprev-next">Next →<br
+          /><a href="${next.url}">${next.data.title}</a
+          ></li>`
+        : ``;
+    }
+  </script>
+</ul>
