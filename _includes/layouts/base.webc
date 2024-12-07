@@ -1,3 +1,7 @@
+<script webc:setup>
+  const { runMode } = eleventy.env,
+    navigation = eleventyNavigation(collections.all);
+</script>
 <!doctype html>
 <html :lang="metadata.language">
   <head>
@@ -7,7 +11,29 @@
   </head>
   <body>
     <a href="#skip" class="visually-hidden">Skip to main content</a>
-    <siteheader></siteheader>
+    <siteheader><nav slot="siteheadernav">
+      <p class="visually-hidden">Top level navigation menu</p>
+      <ul>
+        <script webc:type="js">
+          [
+            ...navigation.map(
+              (navigationItem) => `<li>
+              <a href="${navigationItem.url}"${
+                navigationItem.url == this.page.url ? ` aria-current="page"` : ``
+              }>${navigationItem.title}</a>
+            </li><!-- page.url = ${this.page.url}-->`
+            ),
+            runMode == "serve"
+              ? `<li>
+            <a href="/legect/"${
+                "/legect/" == this.page.url ? ` aria-current="page"` : ``
+              }>legect</a>
+          </li>`
+              : ``,
+          ].join("");
+        </script>
+      </ul>
+    </nav></siteheader>
     <main id="skip" @raw="content"></main>
     <sitefooter></sitefooter>
     <script type="module" webc:keep @raw="getBundle('js')"></script>
