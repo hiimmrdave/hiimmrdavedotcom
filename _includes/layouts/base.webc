@@ -1,13 +1,27 @@
-<script webc:setup>
-  const { runMode } = eleventy.env,
-    navigation = eleventyNavigation(collections.all);
-</script>
+
 <!doctype html>
 <html :lang="metadata.language">
-  <head>
-    <meta webc:is="headmeta"></meta><link rel="stylesheet" href="/css/screen.css"
+  <head><script webc:setup>
+      const { runMode } = eleventy.env,
+        navigation = eleventyNavigation(collections.all);
+    </script><title @text="title || metadata.title"></title>
+    <meta name="description" :content="description" webc:if="description" /><meta webc:is="headmeta"
+    ></meta><link rel="stylesheet" href="/css/screen.css"
     /><link rel="stylesheet" href="/css/code.css" webc:keep
-    /><style webc:keep @raw="getBundle('css')"></style>
+    /><style webc:keep @raw="getBundle('css')"></style><template webc:if="mermaid"
+    ><script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@latest/+esm'
+      mermaid.initialize({
+        theme: "base",
+        themeVariables: {
+          darkMode: true,
+          background: "#383545",
+          fontSize: "1rem",
+          primaryColor: "#383545",
+          fontFamily: "var(--font-family-sans)"
+        }
+      });
+    </script></template>
   </head>
   <body>
     <a href="#skip" class="visually-hidden">Skip to main content</a>
