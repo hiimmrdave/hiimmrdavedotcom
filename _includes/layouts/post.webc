@@ -27,13 +27,12 @@ layout: layouts/base.webc
   </ul>
   <div @html="content" webc:nokeep></div>
 </article>
-<ul class="links-nextprev">
+<ul class="nextprev">
   <script webc:type="js">
     if (collections.posts) {
       const prev = prevPost(this.page);
       prev?.data.title
-        ? `<li class="nextprev-prev">← Previous<br
-          /><a href="${prev.url}">${prev.data.title}</a
+        ? `<li class="nextprev-prev">← Previous <a href="${prev.url}">${prev.data.title}</a
           ></li>`
         : ``;
     }
@@ -42,9 +41,8 @@ layout: layouts/base.webc
     if (collections.posts) {
       const next = nextPost(this.page);
       next?.data.title
-        ? `<li class="nextprev-next">Next →<br
-          /><a href="${next.url}">${next.data.title}</a
-          ></li>`
+        ? `<li class="nextprev-next"><a href="${next.url}">${next.data.title}</a
+          > Next →</li>`
         : ``;
     }
   </script>

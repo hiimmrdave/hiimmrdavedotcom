@@ -222,6 +222,19 @@ footer>* {
   width: 1px;
 }
 
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+
 main>*+*, main>article>*+*, main>section>*+* {
   margin-block-start: 1em;
 }
@@ -300,12 +313,6 @@ header::after {
   content: "";
   display: table;
   clear: both;
-}
-
-.links-nextprev {
-  list-style: none;
-  border-top: 1px dashed var(--color-border-accent);
-  padding: 1em 0;
 }
 
 table {
@@ -481,6 +488,67 @@ pre[class*="language-diff-"] {
 .token.prefix.deleted {
   width: var(--eleventy-code-padding);
   background-color: rgb(0 0 0 / 20%);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+  display: block;
+  margin-left: calc(-1 * var(--eleventy-code-padding));
+  margin-right: calc(-1 * var(--eleventy-code-padding));
+  text-decoration: none; /* override del, ins, mark defaults */
+  color: inherit; /* override del, ins, mark defaults */
+}
+
+.nextprev {
+  display: flex;
+  justify-content: space-between;
+  gap: .5em 1em;
+  list-style: "";
+  border-top: 1px dashed var(--color-gray-20);
+  padding: 1em 0;
+}
+.nextprev > * {
+  flex-grow: 1;
+}
+.nextprev-next {
+  text-align: right;
+}
+
+/*
+ * New diff- syntax
+ */
+
+ pre[class*="language-diff-"] {
+  --eleventy-code-padding: 1.25em;
+  padding-left: var(--eleventy-code-padding);
+  padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+  background-color: hsl(0, 51%, 37%);
+  color: inherit;
+}
+.token.inserted {
+  background-color: hsl(126, 31%, 39%);
+  color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+  -webkit-user-select: none;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+  width: var(--eleventy-code-padding);
+  background-color: rgba(0,0,0,.2);
 }
 
 /* Optional: full-width background color */
