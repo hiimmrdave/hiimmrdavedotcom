@@ -28,7 +28,7 @@ flowchart TB
   methodPick--Look up drug by code-->APILookup
   APILookup[[Drug Search Form]]
   APILookup-->APIFetch
-  APIFetch((Data Fetch\nSubgraph))
+  APIFetch((Data Fetch Subgraph))
   APIFetch--Success-->drugValidate
   APIFetch--Failure-->APILookup
   manualEntry-->drugValidate
@@ -79,11 +79,11 @@ Then enter patient data and receive calculated dosing for the selected drugs, an
 
 | Drug (name & strength)    | Dose quantity | Dose volume | Admin Time    | Admin By |
 | ------------------------- | ------------- | ----------- | ------------- | -------- |
-| maropitant 10 mg/mL       | 30 mg         | **3 mL**    | \_\_\_:\_\_\_ |          |
-| hydromorphone 2 mg/mL     | 6 mg          | **3 mL**    | \_\_\_:\_\_\_ |          |
-| dexmedetomidine 0.5 mg/mL | 0.075 mg      | **0.15 mL** | \_\_\_:\_\_\_ |          |
-| carprofen 50 mg/mL        | 120 mg        | 2.4 mL      | \_\_\_:\_\_\_ |          |
-| propofol 10 mg/mL         | 180 mg        | 18 mL       | \_\_\_:\_\_\_ |          |
+| maropitant 10 mg/mL       | 30 mg         | **3 mL**    | \_\_\_:\_\_\_ | \_\_\_\_ |
+| hydromorphone 2 mg/mL     | 6 mg          | **3 mL**    | \_\_\_:\_\_\_ | \_\_\_\_ |
+| dexmedetomidine 0.5 mg/mL | 0.075 mg      | **0.15 mL** | \_\_\_:\_\_\_ | \_\_\_\_ |
+| carprofen 50 mg/mL        | 120 mg        | 2.4 mL      | \_\_\_:\_\_\_ | \_\_\_\_ |
+| propofol 10 mg/mL         | 180 mg        | 18 mL       | \_\_\_:\_\_\_ | \_\_\_\_ |
 
 ---
 
