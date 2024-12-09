@@ -143,6 +143,10 @@
   max-width: 100%;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 svg, svg * {
   max-width: initial;
 }
