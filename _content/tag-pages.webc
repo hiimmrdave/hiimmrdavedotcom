@@ -1,0 +1,27 @@
+---js
+// <script>
+const pagination = {
+	data: "collections",
+	size: 1,
+	alias: "tag",
+	filter: ["all", "posts"],
+	// addAllPagesToCollections: true,
+};
+
+const eleventyExcludeFromCollections = true;
+
+const eleventyComputed = {
+	title: function(data){return `Tagged “${tag}”`},
+	permalink: function(data) {
+		return `/tags/${this.slugify(data.tag)}/`;
+	}
+};
+---
+
+<script webc:type="js">
+  `<h1>Tagged “${tag}”</h1>`;
+</script>
+
+<postlist items="0" postlist="collections[tag]"></postlist>
+
+<p>See <a href="/tags/">all tags</a>.</p>
