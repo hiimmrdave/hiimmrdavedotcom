@@ -6,6 +6,7 @@ import pluginNavigation from "@11ty/eleventy-navigation";
 import pluginWebc from "@11ty/eleventy-plugin-webc";
 import pluginInclusiveLang from "@11ty/eleventy-plugin-inclusive-language";
 import pluginMermaid from "@kevingimbel/eleventy-plugin-mermaid";
+import pluginFilters from "./_config/filters.js";
 
 import markdownItFootnote from "markdown-it-footnote";
 import markdownItDeflist from "markdown-it-deflist";
@@ -86,11 +87,8 @@ export default function (eleventyConfig) {
   eleventyConfig.setServerOptions({
     domDiff: false,
   });
-  eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-    return (tags || []).filter(
-      (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
-    );
-  });
+
+  eleventyConfig.addPlugin(pluginFilters);
 }
 
 export const config = {
