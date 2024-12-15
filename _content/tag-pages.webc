@@ -1,5 +1,4 @@
 ---js
-// <script>
 const pagination = {
 	data: "collections",
 	size: 1,
@@ -11,7 +10,7 @@ const pagination = {
 const eleventyExcludeFromCollections = true;
 
 const eleventyComputed = {
-	title: function(data){return `Tagged “${tag}”`},
+	title: function(data){return `Tagged “${data.tag}”`},
 	permalink: function(data) {
 		return `/tags/${this.slugify(data.tag)}/`;
 	}
