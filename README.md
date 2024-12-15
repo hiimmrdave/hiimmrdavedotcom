@@ -1,28 +1,15 @@
-# eleventy-base-webc
+# hiimmrdave.com: the movie: the video game: the repo
 
-A minimalist bare-bones Eleventy-official starter project useful for demos/experiments with [WebC](https://www.11ty.dev/docs/languages/webc/) and the [Eleventy](https://www.11ty.dev/) site generator (using the [v3.0 release](https://www.11ty.dev/blog/canary-eleventy-v3/)).
+This is the repository that builds <https://hiimmrdave.com>. The current iteration is derived from eleventy-base-blog
 
-## Features
+## CONTRIBUTING
 
-* [Eleventy WebC plugin](https://www.11ty.dev/docs/languages/webc/) preconfigured:
-  * Includes the [`<is-land>` WebC component](https://www.11ty.dev/docs/plugins/partial-hydration/) ready for use.
-  * Add your own `*.webc` files to the `_components` folder.
-* Using the new [`js` front matter type for arbitrary JavaScript front matter](https://www.11ty.dev/docs/data-frontmatter/#javascript-front-matter)
-* Simple WebC Eleventy Layout file with streamlined critical CSS and JS bundles (see `_includes/layouts/base.webc`)
+I accept and appreciate PRs or issues for:
 
-## Get Started
+- typos
+- clerical errors
+- dead links
+- layout glitches
+- things like this
 
-1. Make a copy of this code with **one** of these on the command line (both install into the current folder):
-  * `git clone https://github.com/11ty/eleventy-base-webc.git .`
-  * `npx degit 11ty/eleventy-base-webc`
-  * …or you can use the [_"Use this template"_ button on GitHub](https://github.com/11ty/eleventy-base-webc).
-2. Install the dependencies by running `npm install`
-3. Run it with `npm start` (see the other commands in `package.json` or on the [CLI docs](https://www.11ty.dev/docs/usage/))
-4. Navigate to `http://localhost:8080` in your web browser.
-5. Edit `content/index.webc` to change content on the home page.
-
-## Demo
-
-- [Cloudflare Pages](https://eleventy-base-webc.pages.dev/)
-- [Netlify](https://eleventy-base-webc.netlify.app/)
-- Learn more about [deploying an Eleventy project to the web](https://www.11ty.dev/docs/deployment/).
+Please contact me directly for concerns or questions about content.
