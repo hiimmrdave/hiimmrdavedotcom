@@ -22,6 +22,8 @@ const eleventyComputed = {
   `<h1>Tagged “${tag}”</h1>`;
 </script>
 
-<postlist items="0" postlist="collections[tag]"></postlist>
+<template webc:type="11ty" 11ty:type="njk">
+  {% set postslist = collections[ tag ] %} {% include "postslist.njk" %}
+</template>
 
 <p>See <a href="/tags/">all tags</a>.</p>
