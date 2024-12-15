@@ -3,7 +3,6 @@ layout: layouts/base.webc
 eleventyNavigation:
   key: blog
   order: 2
-tags: "yes"
 ---
 
 <hgroup>
