@@ -1,6 +1,9 @@
-<h1>Tags</h1>
+---
+layout: layouts/page.webc
+title: "most tags"
+---
+
 <ul>
-  <!--tag list-->
   <script webc:type="js">
     filterTagList(Object.keys(collections))
       .map((tag) => {
@@ -9,5 +12,4 @@
       })
       .join("\n");
   </script>
-  <!--/tag list-->
 </ul>
