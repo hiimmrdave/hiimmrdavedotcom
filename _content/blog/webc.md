@@ -1,6 +1,6 @@
 ---
 title: building with webc
-description: On the process of removing reliance on templating languages
+description: I don't know if this gets used
 tags:
   - webc
   - blog meta

@@ -6,4 +6,4 @@ eleventyNavigation:
 title: hi, i'm Mr. Dave!
 ---
 
-I need to rethink the front page.
+<postlist></postlist>

@@ -93,9 +93,7 @@
   --ltbrown: hsl(25deg 35% 65%);
   --ltyellow: hsl(48deg 85% 75%);
   --ltlime: hsl(95deg 60% 80%);
-  --ltgreen: hsl(140deg 65% 70%);
-  --green: hsl(140deg 65% 45%);
-  --dkgreen: hsl(140deg 70% 25%);
+  --ltgreen: hsl(140deg 65% 75%);
   --ltteal: hsl(170deg 65% 80%);
   --teal: hsl(170deg 65% 50%);
   --dkteal: hsl(170deg 65% 30%);
@@ -109,6 +107,8 @@
 
   /* theme variable assignments */
   --color-border-accent: var(--light);
+  --color-gray-50: var(--grey2);
+  --color-gray-90: var(--grey1);
   --color-body-background: var(--grey8);
   --color-header-background: var(--dark);
   --color-footer-background: var(--grey9);
@@ -117,8 +117,6 @@
   --color-text-link-active: var(--grey3);
   --color-text-link-visited: var(--ltpurple);
   --color-ui-glow: hsl(250deg 80% 75% / 50%);
-  --color-code-deleted: var(--dkred);
-  --color-code-added: var(--dkgreen);
   --size-0: 0.382rem;
   --size-1: 0.618rem;
   --size-2: 0.786rem;
@@ -171,9 +169,9 @@ header {
   font-style: normal;
   font-size: 1rem;
   background: var(--color-header-background);
-  box-shadow: 0 1px 2px var(--color-ui-glow),
-  0 2px 4px var(--color-ui-glow),
-  0 4px 8px var(--color-ui-glow),
+  box-shadow: 0 1px 2px var(--color-ui-glow), 
+  0 2px 4px var(--color-ui-glow), 
+  0 4px 8px var(--color-ui-glow), 
   0 8px 16px var(--color-ui-glow);
   border-block-end: 1px dashed var(--color-border-accent);
 } 
@@ -200,9 +198,9 @@ footer {
 
   /* colors */
   background: var(--color-footer-background);
-  box-shadow: 1px 0 2px var(--color-ui-glow),
-  2px 0 4px var(--color-ui-glow),
-  4px 0 8px var(--color-ui-glow),
+  box-shadow: 1px 0 2px var(--color-ui-glow), 
+  2px 0 4px var(--color-ui-glow), 
+  4px 0 8px var(--color-ui-glow), 
   8px 0 16px var(--color-ui-glow);
   border-block-start: 1px dashed var(--color-border-accent);
   margin-block-start: var(--size-2);
@@ -406,6 +404,8 @@ ul.h-list li+li {
 }
 
 .postlist-item {
+  display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   counter-increment: start-from -1;
   margin-bottom: 1em;
@@ -418,13 +418,11 @@ ul.h-list li+li {
   line-height: 100%;
   text-align: right;
   margin-left: -1.5rem;
-  color: var(--grey4);
-  font-size: var(--size-2);
 }
 
-.postlist-date {
-  color: var(--grey4);
-  font-size: var(--size-2);
+.postlist-date,
+.postlist-item::before {
+  color: var(--color-gray-90);
 }
 
 .postlist-link {
@@ -507,7 +505,7 @@ pre[class*="language-diff-"] {
   justify-content: space-between;
   gap: .5em 1em;
   list-style: "";
-  border-top: 1px dashed var(--color-border-accent);
+  border-top: 1px dashed var(--grey2);
   padding: 1em 0;
 }
 .nextprev > * {
@@ -521,17 +519,17 @@ pre[class*="language-diff-"] {
  * New diff- syntax
  */
 
-pre[class*="language-diff-"] {
+ pre[class*="language-diff-"] {
   --eleventy-code-padding: 1.25em;
   padding-left: var(--eleventy-code-padding);
   padding-right: var(--eleventy-code-padding);
 }
 .token.deleted {
-  background-color: var(--color-code-deleted);
+  background-color: hsl(0, 51%, 37%);
   color: inherit;
 }
 .token.inserted {
-  background-color: var(--color-code-added);
+  background-color: hsl(126, 31%, 39%);
   color: inherit;
 }
 

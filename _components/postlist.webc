@@ -26,7 +26,7 @@
         })}</time>
 </li>`;
       })
-      .toReversed()
+      .reverse()
       .join("\n");
   </script>
 </ol>
