@@ -368,7 +368,7 @@ i.whisper {
 /* Nav */
 body>header>nav>ul {
   display: flex;
-  list-style: none;
+  list-style-type: "";
   justify-content: flex-end;
 }
 
@@ -386,11 +386,11 @@ header nav ul li a[href][aria-current="page"] {
 }
 
 ul.h-list {
-  list-style: none;
+  list-style-type: "";
 }
 
 ul.h-list li {
-  list-style: none;
+  list-style-type: "";
   display: inline-block;
 }
 
@@ -400,7 +400,7 @@ ul.h-list li+li {
 
 /* Posts list */
 .postlist {
-  list-style: none;
+  list-style-type: "";
   padding: 0;
   padding-left: 1.5rem;
 }
@@ -448,7 +448,7 @@ main .post-metadata {
   flex-wrap: wrap;
   gap: var(--size-1);
   font-size: var(--size-2);
-  list-style: none;
+  list-style-type: "";
   padding: 0;
   max-width: 80rem;
 }
@@ -506,7 +506,7 @@ pre[class*="language-diff-"] {
   display: flex;
   justify-content: space-between;
   gap: .5em 1em;
-  list-style: "";
+  list-style-type: "";
   border-top: 1px dashed var(--color-border-accent);
   padding: 1em 0;
 }
