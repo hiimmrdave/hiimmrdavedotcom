@@ -275,7 +275,7 @@ main aside>p, main aside>ul{
 
 h1,h2,h3,h4,.home-link {
   font-family: var(--font-family-serif);
-  font-weight: 200;
+  font-weight: normal;
 }
 
 small {
