@@ -1,5 +1,5 @@
 export default {
-	tags: ["nodes"],
-	layout: "layouts/legect.webc",
-	draft: true,
+  tags: ["legect"],
+  layout: "layouts/legect.webc",
+  draft: true,
 };
