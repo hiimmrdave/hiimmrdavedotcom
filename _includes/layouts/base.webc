@@ -1,14 +1,16 @@
 
 <!doctype html>
-<html :lang="metadata.language">
+<html :lang="language">
   <head><script webc:setup>
       const { runMode } = eleventy.env,
+        { generator } = eleventy,
+        { language } = metadata,
         navigation = eleventyNavigation(collections.all);
     </script><title @text="title || metadata.title"></title>
     <meta name="description" :content="description" webc:if="description" /><meta webc:is="headmeta"
-    ></meta><link rel="stylesheet" href="/css/screen.css"
-    /><link rel="stylesheet" href="/css/code.css"
-    /><style webc:keep @raw="getBundle('css')"></style><template webc:if="mermaid"
+    ></meta><link rel="stylesheet" href="/css/screen.css" webc:keep
+    /><link rel="stylesheet" href="/css/code.css" webc:keep
+    /><!--<style webc:keep @text="getBundle('css')"></style>--><template webc:if="mermaid"
     ><script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@latest/+esm'
       mermaid.initialize({
@@ -35,7 +37,7 @@
               <a href="${navigationItem.url}"${
                 navigationItem.url == this.page.url ? ` aria-current="page"` : ``
               }>${navigationItem.title}</a>
-            </li><!-- page.url = ${this.page.url}-->`
+            </li>`
             ),
             runMode == "serve"
               ? `<li>
@@ -48,8 +50,8 @@
         </script>
       </ul>
     </nav></siteheader>
-    <main id="skip" @raw="content"></main>
+    <main id="skip" @html="content"></main>
     <sitefooter></sitefooter>
-    <script type="module" webc:keep @raw="getBundle('js')"></script>
+    <script type="module" webc:keep @text="getBundle('js')"></script>
   </body>
 </html>

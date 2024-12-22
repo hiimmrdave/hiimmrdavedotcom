@@ -3,7 +3,7 @@ layout: layouts/base.webc
 ---
 
 <script webc:setup>
-	const { title } = eleventy;
+  const { title } = eleventy;
 </script>
 <h1 @text="title"></h1>
-<div @raw="content" webc:nokeep></div>
+<div @html="content" webc:nokeep></div>

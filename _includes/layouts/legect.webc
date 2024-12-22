@@ -4,10 +4,10 @@ draft: true
 ---
 
 <script webc:setup>
-	const { title } = eleventy;
+  const { title } = eleventy;
 </script>
 <h1 @text="title"></h1>
-<div @raw="content" webc:nokeep></div>
+<template @html="content" webc:nokeep></template>
 <p>
-	<a href="/legect">out of my mind</a>
+  <a href="/legect">out of my mind</a>
 </p>

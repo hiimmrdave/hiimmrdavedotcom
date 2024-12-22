@@ -2,11 +2,7 @@
   const { title, language, description } = metadata,
     { generator } = eleventy;
 </script>
-<!--siteheader-->
 <header>
   <a href="/" class="home-link" @text="title"></a>
-  <!--siteheadernav-->
   <slot name="siteheadernav"></slot>
-  <!--/siteheadernav-->
 </header>
-<!--/siteheader-->
