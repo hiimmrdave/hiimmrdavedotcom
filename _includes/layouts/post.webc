@@ -4,9 +4,9 @@ layout: layouts/base.webc
 
 <script webc:setup>
   const prevPost = (post) =>
-      getPreviousCollectionItem(collections.posts, post, metadata.language),
+      getPreviousCollectionItem(collections.post, post, metadata.language),
     nextPost = (post) =>
-      getNextCollectionItem(collections.posts, post, metadata.language);
+      getNextCollectionItem(collections.post, post, metadata.language);
 </script>
 <article class="blog-post">
   <h1 @text="title"></h1>
@@ -29,7 +29,7 @@ layout: layouts/base.webc
 </article>
 <ul class="nextprev">
   <script webc:type="js">
-    if (collections.posts) {
+    if (collections.post) {
       const prev = prevPost(this.page);
       prev?.data.title
         ? `<li class="nextprev-prev">← Previous <a href="${prev.url}">${prev.data.title}</a
