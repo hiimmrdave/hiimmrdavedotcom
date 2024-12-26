@@ -16,15 +16,10 @@ I've worked in animal health for over a decade. I've done it for long enough tha
 
 ## about this site
 
-- hosted on [Netlify][]
-- runs on [eleventy][], derived from [eleventy-base-blog][]
-- builds from the [hiimmrdavedotcom][] repo
+- hosted on [Netlify](https://netlify.com)
+- runs on [eleventy](https://www.11ty.dev/), derived from [eleventy-base-blog](https://github.com/hiimmrdave/eleventy-js-blog)
+- builds from the [hiimmrdavedotcom](https://github.com/hiimmrdave/hiimmrdavedotcom) repo
 
 as a very specific kind of geek, I'd be happy to talk about the particulars of how I cobbled things together here, and my goals for the site. I'll write them up here, too.
 
 </section>
-
-[Netlify]: <https://netlify.com>
-[eleventy]: <https://www.11ty.dev/>
-[eleventy-base-blog]: <https://eleventy-base-blog.netlify.app/>
-[hiimmrdavedotcom]: <https://github.com/hiimmrdave/hiimmrdavedotcom>
