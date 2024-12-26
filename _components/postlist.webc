@@ -1,0 +1,16 @@
+<!-- postlist component -->
+<ol
+	reversed
+	class="postlist"
+	:style="`counter-reset: start-from ${Number.parseInt(postcount) + 1}`"
+>
+	<li class="postlist-item" webc:for="post of postlist.toReversed()">
+		<a :href="post.url" class="postlist-link" @text="post.data.title"></a>
+		<time
+			:datetime="new Date(post.data.date).toISOString()"
+			class="postlist-date"
+			@text="new Date(post.data.date).toLocaleDateString( en-US , { month: 'long', year: 'numeric' } )"
+		></time>
+	</li>
+</ol>
+<!-- /postlist component -->

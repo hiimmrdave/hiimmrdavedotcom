@@ -1,0 +1,8 @@
+<script webc:setup>
+  const { title, language, description } = metadata,
+    { generator } = eleventy;
+</script>
+<header>
+  <a href="/" class="home-link" @text="title"></a>
+  <slot name="siteheadernav"></slot>
+</header>

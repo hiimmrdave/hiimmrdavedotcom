@@ -1,0 +1,17 @@
+---js
+  const layout = "layouts/base.webc";
+  const eleventyNavigation = {
+      key: "blog",
+      order: 2,
+	};
+---
+
+<hgroup>
+  <h1>hi, i'm Mr. Log!</h1>
+  <i class="whisper">(Mr. Dave's web log)</i>
+</hgroup>
+<postlist
+  :postlist="collections.posts"
+  :poststoshow="Infinity"
+  :postcount="collections.posts.length"
+></postlist>

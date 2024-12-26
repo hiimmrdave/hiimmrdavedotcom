@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html :lang="language">
+  <head><script webc:setup>
+      const { runMode } = eleventy.env,
+        { generator } = eleventy,
+        { language } = metadata,
+        navigation = eleventyNavigation(collections.all);
+    </script><title @text="title || metadata.title"></title>
+    <meta name="description" :content="description" webc:if="description" /><meta webc:is="headmeta"
+    ></meta><link rel="stylesheet" href="/css/screen.css" webc:keep
+    /><link rel="stylesheet" href="/css/code.css" webc:keep
+    /><!--<style webc:keep @text="getBundle('css')"></style>--><template webc:if="mermaid"
+    ><script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@latest/+esm'
+      mermaid.initialize({
+        theme: "base",
+        themeVariables: {
+          darkMode: true,
+          background: "#383545",
+          fontSize: "1rem",
+          primaryColor: "#383545",
+          fontFamily: "var(--font-family-sans)"
+        }
+      });
+    </script></template>
+  </head>
+  <body>
+    <a href="#skip" class="visually-hidden">Skip to main content</a>
+    <siteheader><nav slot="siteheadernav">
+      <p class="visually-hidden">Top level navigation menu</p>
+      <ul>
+        <script webc:type="js">
+          [
+            ...navigation.map(
+              (navigationItem) => `<li>
+              <a href="${navigationItem.url}"${
+                navigationItem.url == this.page.url ? ` aria-current="page"` : ``
+              }>${navigationItem.title}</a>
+            </li>`
+            ),
+            runMode == "serve"
+              ? `<li>
+            <a href="/legect/"${
+                "/legect/" == this.page.url ? ` aria-current="page"` : ``
+              }>legect</a>
+          </li>`
+              : ``,
+          ].join("");
+        </script>
+      </ul>
+    </nav></siteheader>
+    <main id="skip" @html="content"></main>
+    <sitefooter></sitefooter>
+    <script type="module" webc:keep @text="getBundle('js')"></script>
+  </body>
+</html>

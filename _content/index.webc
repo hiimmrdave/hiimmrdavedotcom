@@ -1,0 +1,44 @@
+---js
+const eleventyNavigation = {
+	key: "Home",
+	order: 1
+};
+
+const numberOfLatestPostsToShow = 3;
+---
+
+<script webc:setup>
+	const postsCount = collections.posts.length,
+		latestPostsCount = Math.min(postsCount, numberOfLatestPostsToShow),
+		postlist = head(collections.post, -1 * numberOfLatestPostsToShow),
+		morePosts = postsCount - numberOfLatestPostsToShow;
+</script>
+<h1>
+	<script webc:type="js">
+		`Latest ${latestPostsCount != 1 ? `${latestPostsCount} Posts` : `Post`}`;
+	</script>
+</h1>
+
+<postlist
+	:postlist="head(collections.posts, -1 * numberOfLatestPostsToShow)"
+	:poststoshow="numberOfLatestPostsToShow"
+	:postcount="collections.posts.length"
+></postlist>
+
+<p webc:if=" morePosts > 0 ">
+	<script webc:type="js">
+		`${morePosts} more post${morePosts != 1 ? `s` : ``} can be found in 
+			<a href="blog.webc">the archive</a>.`;
+	</script>
+</p>
+<!--- List every content page in the project 
+<script webc:type="js">
+  [
+    "<ul>",
+    ...collections.all.map(function (entry) {
+      return `<li><a href="${entry.url}"><code>${entry.url}</code></a></li>`;
+    }),
+    "</ul>",
+  ].join("\n");
+</script>
+--->

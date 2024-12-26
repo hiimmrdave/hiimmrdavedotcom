@@ -1,0 +1,15 @@
+---
+layout: layouts/page.webc
+title: "most tags"
+---
+
+<ul>
+  <script webc:type="js">
+    filterTagList(Object.keys(collections))
+      .map((tag) => {
+        tagURL = `/tags/${slugify(tag)}/`;
+        return `<li><a href="${tagURL}" class="post-tag">${tag}</a></li>`;
+      })
+      .join("\n");
+  </script>
+</ul>

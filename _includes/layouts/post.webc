@@ -1,0 +1,25 @@
+---
+layout: layouts/base.webc
+---
+
+<article class="blog-post">
+	<h1 @text="title"></h1>
+	<ul class="post-metadata">
+		<li>
+			<time
+				:datetime="page.date.toISOString();"
+				@text="page.date.toLocaleDateString( 'en-US', { month: 'long' , year: 'numeric' });"
+			></time>
+		</li>
+		<script webc:type="js">
+			filterTagList(tags)
+				.map(
+					(e) => `<li><a href="/tags/${slugify(e)}/" rel="tag">${e}</a></li>`
+				)
+				.join("\n");
+		</script>
+	</ul>
+	<div @html="content" webc:nokeep></div>
+</article>
+
+<nextprev :collection="collections.posts" :post="this.page"></nextprev>

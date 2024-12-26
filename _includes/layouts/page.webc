@@ -1,0 +1,6 @@
+---
+layout: layouts/base.webc
+---
+
+<title @text="title || metadata.title"></title>
+<div @html="content" webc:nokeep></div>
