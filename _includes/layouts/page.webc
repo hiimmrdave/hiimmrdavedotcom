@@ -2,8 +2,5 @@
 layout: layouts/base.webc
 ---
 
-<script webc:setup>
-  const { title } = eleventy;
-</script>
-<h1 @text="title"></h1>
+<title @text="title || metadata.title"></title>
 <div @html="content" webc:nokeep></div>
