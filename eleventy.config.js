@@ -30,7 +30,7 @@ export default function (eleventyConfig) {
     .addPassthroughCopy({
       "./_public/": "/",
     })
-    .addPassthroughCopy("content/feed/pretty-atom-feed.xsl");
+    .addPassthroughCopy("_content/feed/pretty-atom-feed.xsl");
 
   eleventyConfig.ignores.add("README.md");
 
