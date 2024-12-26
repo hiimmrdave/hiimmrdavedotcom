@@ -502,7 +502,7 @@ pre[class*="language-diff-"] {
   color: inherit; /* override del, ins, mark defaults */
 }
 
-.nextprev {
+.links-nextprev {
   display: flex;
   justify-content: space-between;
   gap: .5em 1em;
@@ -510,10 +510,10 @@ pre[class*="language-diff-"] {
   border-top: 1px dashed var(--color-border-accent);
   padding: 1em 0;
 }
-.nextprev > * {
+.links-nextprev > * {
   flex-grow: 1;
 }
-.nextprev-next {
+.links-nextprev-next {
   text-align: right;
 }
 
