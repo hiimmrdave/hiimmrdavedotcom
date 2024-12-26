@@ -7,6 +7,7 @@ tags:
   - rough draft
   - learning in commit history
 date: 2023-03-15
+numberOfLatestPostsToShow: 4
 ---
 
 ## Behold
@@ -17,7 +18,11 @@ A man!
 
 This one post is using the webc-based layout chain. The goal is to create feature parity with the other pages on the site, then gradually pull out the nunjucks.
 
-<postlist items="4"></postlist>
+<postlist
+ :postlist="head(collections.posts, -1 * numberOfLatestPostsToShow)"
+ :poststoshow="numberOfLatestPostsToShow"
+ :postcount="collections.posts.length"
+>text</postlist>
 
 ## TODO
 
