@@ -97,4 +97,6 @@ export const config = {
     includes: "../_includes", // default: "_includes"
     data: "../_data", // default: "_data"
   },
+
+  markdownTemplateEngine: "webc",
 };

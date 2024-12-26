@@ -2,6 +2,7 @@
 permalink: 404.html
 eleventyExcludeFromCollections: true
 ---
-# Content not found
+
+<h1>Content not found</h1>
 
 Go <a href="/">home</a>.
