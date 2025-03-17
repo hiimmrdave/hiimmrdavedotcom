@@ -1,0 +1,12 @@
+---js
+  const layout = "layouts/page.webc",
+		title = "positions";
+---
+
+<!--- https://tilde.zone/@misterdave/113320661447744541 --->
+
+<postlist
+	:postlist="collections.positions"
+	:poststoshow="Infinity"
+	:postcount="collections.positions.length"
+></postlist>

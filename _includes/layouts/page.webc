@@ -2,5 +2,6 @@
 layout: layouts/base.webc
 ---
 
-<title @text="title || metadata.title"></title>
+<!--- This should have its own layout wwhich inserts the appropriate title --->
+<h1 @text="title || metadata.title"></h1>
 <div @html="content" webc:nokeep></div>
