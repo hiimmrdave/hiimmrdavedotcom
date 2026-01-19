@@ -23,11 +23,11 @@ Beyond veterinary medicine, my work interests include:
 
 ## Home
 
-My fiancée and I are raising our three children, two guinea pigs, and a dog or two. She is working toward her Bachelor of Science in Nursing. I am focused on making sure they have what they need to learn and grow.
+My fiancée and I are raising our three children and a dog or two.
 
 ## Projects
 
-Do I want to tie github in here? depends, can I `npm i -D eleventy-plugin-github-stuff`?
+Do I want to tie github in here? depends, can I `npm i -D eleventy-plugin-git-stuff`?
 
 ### Animal Drug Data
 

@@ -31,11 +31,11 @@ The [`for`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/St
 
 ```javascript
 for (
-  let i = 0; // starting from index 0
-  i < colors.length; // while the index is less than the length of the array
-  i++ // go through the indices one by one and do the following
+	let i = 0; // starting from index 0
+	i < colors.length; // while the index is less than the length of the array
+	i++ // go through the indices one by one and do the following
 ) {
-  console.log(colors[i]); // log the element at index `i` to the console
+	console.log(colors[i]); // log the element at index `i` to the console
 }
 ```
 
@@ -44,10 +44,10 @@ The [`while`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 ```javascript
 let i = 0; // starting from index 0
 while (
-  i < colors.length // while the index is less than the length of the array
+	i < colors.length // while the index is less than the length of the array
 ) {
-  console.log(colors[i]); // log the element at index `i` to the console
-  i++; // go to the next index
+	console.log(colors[i]); // log the element at index `i` to the console
+	i++; // go to the next index
 }
 ```
 
@@ -59,8 +59,8 @@ The [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Referen
 
 ```javascript
 for (const color of colors) {
-  // "color" refers to each element of the array.
-  console.log(color);
+	// "color" refers to each element of the array.
+	console.log(color);
 }
 ```
 
@@ -69,8 +69,9 @@ Saved a whole bunch of typing, here. It strikes a nice balance of being concise 
 The [`for...in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) syntax is similar to `for...of` but instead of iterating over the values of the elements, it iterates over the indices of the elements. To get the same result as the rest of the loops it's a bit more typing than a `for...of` loop.
 
 ```javascript
-for (const index in colors) { // "index" is similar to the "i" of a for loop
-  console.log(colors[index]); // you have to refer to the original array
+for (const index in colors) {
+	// "index" is similar to the "i" of a for loop
+	console.log(colors[index]); // you have to refer to the original array
 }
 ```
 
@@ -84,7 +85,7 @@ Let's start with a simple example:
 
 ```javascript
 colors.forEach((color) => {
-  console.log(color);
+	console.log(color);
 });
 ```
 
@@ -92,7 +93,7 @@ This looks similar to the `for...of` pattern, but what's happening is slightly d
 
 ```javascript
 function logElement(element) {
-  console.log(element);
+	console.log(element);
 }
 
 colors.forEach(logElement);
@@ -102,7 +103,7 @@ In this case, the `logMe` function will be called for each element of the array,
 
 ```javascript
 function logArrayItem(_item, index, array) {
-  console.log(array[index]);
+	console.log(array[index]);
 }
 
 colors.forEach(logArrayItem);

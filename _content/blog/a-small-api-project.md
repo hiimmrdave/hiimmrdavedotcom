@@ -3,9 +3,9 @@ title: A small API project
 description: Using a public API to make my day job easier.
 date: 2020-12-18
 tags:
- - project
- - veterinary medicine
- - APIs
+  - project
+  - veterinary medicine
+  - APIs
 mermaid: true
 ---
 
@@ -68,6 +68,7 @@ Then enter patient data and receive calculated dosing for the selected drugs, an
 ### Sample Patient Data
 
 ---
+
 "**Fluffy**" Jones, Davey
 
 - 66.0 lbs
@@ -75,7 +76,7 @@ Then enter patient data and receive calculated dosing for the selected drugs, an
 - canine
 - Petit Basset Griffon Vendéen
 - LRS 150 mL/hr
-{.h-list}
+  {.h-list}
 
 | Drug (name & strength)    | Dose quantity | Dose volume | Admin Time    | Admin By |
 | ------------------------- | ------------- | ----------- | ------------- | -------- |
@@ -91,6 +92,5 @@ The project is already started on GitHub at <http://hiimmrdave.github.io/dosing>
 
 [^openFDA]: the FDA's (abandoned?) open data project at [https://open.fda.gov/apis/drug/ndc/](https://open.fda.gov/apis/drug/ndc/)
 
-*[NDC]: National Drug Code
-*[FDA]: United States Food and Drug Administration
-*[API]: Application Programming Interface
+_[NDC]: National Drug Code
+_[FDA]: United States Food and Drug Administration \*[API]: Application Programming Interface
